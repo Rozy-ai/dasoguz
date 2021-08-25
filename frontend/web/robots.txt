@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+User-agent: Googlebot
+Host: www.ozisim.com
+Sitemap: http://ozisim.com/
