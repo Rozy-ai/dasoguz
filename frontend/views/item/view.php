@@ -105,5 +105,8 @@ $this->registerMetaTag(['property' => 'og:image', 'itemprop' => 'image', 'conten
         </div>
     </div>
 </div>
+<?php 
+$this->registerCssFile("@web/source/css/style.css");
+ ?>
 
 

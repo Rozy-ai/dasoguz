@@ -71,3 +71,6 @@ $events = \common\models\wrappers\ItemWrapper::find()->with(['translations','doc
         </div>
     </div>
 </div>
+<?php 
+$this->registerCssFile("@web/source/css/style.css");
+ ?>
