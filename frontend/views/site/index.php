@@ -136,7 +136,7 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
                     <h3 class="title-big mb-3">Ugurlar barada maglumat</h3>
                     <p>Awtobuslaryň ähli ugurlary barada maglumat</p>
                 </div>
-                <a href="contact.html" class="btn btn-style btn-effect mt-lg-0 mt-4">Biz bilen habarlaşyň</a>
+                <a href="<?= '/site/a/contact' ?>" class="btn btn-style btn-effect mt-lg-0 mt-4">Biz bilen habarlaşyň</a>
             </div>
         </div>
     </div>

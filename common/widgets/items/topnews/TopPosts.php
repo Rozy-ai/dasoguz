@@ -9,6 +9,7 @@ class TopPosts extends \yii\base\Widget
     public $items = [];
     public $limit = 5;
     public $category = null;
+    public $message;
 
     public function init()
     {

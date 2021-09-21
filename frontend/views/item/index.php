@@ -9,7 +9,6 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->registerMetaTag(['name' => 'description', 'content' => yii::t('app', 'Site description')]);
-
 if (isset($modelCategory)) {
     $this->title = $title = $modelCategory->name;
     $this->params['breadcrumbs'] = $modelCategory->getBreadcrumbs();

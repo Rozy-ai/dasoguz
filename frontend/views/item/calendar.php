@@ -13,7 +13,6 @@ $this->params['breadcrumbs'][] = Yii::$app->controller->truncate('', 8, 65);
 //$this->params['breadcrumbs'][] = ['label' => Yii::$app->controller->truncate($model->title, 8, 65), 'url' => '/item/'.$model->id];
 
 
-
 ?>
 
 <div class="news_content">
@@ -32,14 +31,14 @@ $events = \common\models\wrappers\ItemWrapper::find()->with(['translations','doc
                         <img src="<?= $event->getThumbPath(80, 50, 'w', true, false, true) ?>" class="singleNews-img" alt="<?=$event->title ?>">
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12"> 
-                        <div class="pb-1 pl-0">
+                        <div class="pb-1 pl-0" style="color: #000">
                                      <?php
                                          $date = New DateTime($event->date_event);
                                          echo $date->format('d-m-Y');
                                ?>
                         </div>
-                        <div class="news-list-title"><?=$event->title ?></div>
-                        <div class="news-list-description"><p>
+                        <div class="news-list-title" style="color: #000"><?=$event->title ?></div>
+                        <div class="news-list-description"><p style="color: #000">
                             <?php 
                             $desc = Yii::$app->controller->truncate($event->description, 26, 280);
                               echo $desc;

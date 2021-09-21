@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
@@ -91,9 +90,13 @@ $this->registerMetaTag(['property' => 'og:image', 'itemprop' => 'image', 'conten
                     </div>
                             <?php $eventCategory->code = 'news'; ?>
 
+                            <?php
+                                            $unset_id = $model->id;
+                    ?>
                             <?php echo common\widgets\items\topnews\TopPosts::widget([
                                 'limit' => 3,
                                 'category' => $eventCategory->code,
+                                'message' => $unset_id
                             ]); ?>
 
                     </div>

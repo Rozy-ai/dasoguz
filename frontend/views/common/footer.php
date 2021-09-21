@@ -33,10 +33,10 @@ $routes = Route::find()->limit(4)->all();
 
                         <ul>
                             <h6 class="footer-title-29">Edara</h6>
-                            <li><a href="about">Edara barada</a></li>
-                            <li><a href="#blog"> Täzelikler</a></li>
-                            <li><a href="#pricing"> Etraplara gatnawlar</a></li>
-                            <li><a href="contact.html">Habarlaşmak</a></li>
+                            <li><a href="<?='/site/a/about'?>"><?= Yii::t('app', 'About Us') ?></a></li>
+                            <li><a href="<?= '/item/news'?>"> Täzelikler</a></li>
+                            <!-- <li><a href="#pricing"> Etraplara gatnawlar</a></li> -->
+                            <li><a href="<?='/site/a/contact' ?>"><?= Yii::t('app', 'Contact') ?></a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
