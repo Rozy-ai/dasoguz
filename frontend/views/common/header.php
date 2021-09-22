@@ -15,7 +15,29 @@ $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']]
 
 
 ?>
-
+<style>
+    header div.lang_img img{
+  width: 30px;
+  height: 20px;
+  margin-top: 2px;
+/*  margin-bottom: 10px;*/
+  margin-right: 10px;
+  cursor: pointer;
+}
+.language_box li.language-switcher {
+    list-style: none;
+}
+ul.lang_ul {
+    list-style: none;
+ /*   margin: 38px 0 10px 0;*/
+}
+ul.lang_ul li {
+    display: inline-block;
+}
+.language_box {
+    margin-top: -30px;
+}
+</style>
 
     <header class="w3l-header">
         <!--/nav-->
@@ -55,12 +77,22 @@ $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']]
                     'itemOptions' => ['class' => 'nav-item'],
                     ]);
                     ?>
-
+                    
+        <div class="lang_img ml-lg-3">
+                              
+                        <?php
+                        echo \common\widgets\language\LanguageSwitcherDropdownWidget::widget([
+                           // 'showFlags' => true
+                        ]);0
+                        
+                        ?>
+                 
+        </div>
                     
 
-                    <div class="ml-lg-3">
+<!--                     <div class="ml-lg-3">
                         <a href="#url" class="btn btn-style btn-effect">Şu taýdan başla</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>

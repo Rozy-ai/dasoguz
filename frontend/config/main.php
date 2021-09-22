@@ -8,7 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
-    'name' => 'Ozisim.com',
+    'name' => 'DaşoguzAwtoulag',
     'basePath' => dirname(__DIR__),
 //    'homeUrl'=>array('/site/index'),
     'bootstrap' => ['log'],
@@ -45,13 +45,13 @@ return [
 
 
     'components' => [
-        'assetManager' => [
-            'bundles' => [
-                'yii\web\JqueryAsset' => [
-                    'js'=>['/source/js/jquery.min.js']
-                ],
-            ],
-        ],
+        // 'assetManager' => [
+        //     'bundles' => [
+        //         'yii\web\JqueryAsset' => [
+        //             'js'=>['/source/js/jquery.min.js']
+        //         ],
+        //     ],
+        // ],
         'view' => [
             'theme' => [
                 'pathMap' => [

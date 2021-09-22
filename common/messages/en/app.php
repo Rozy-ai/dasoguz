@@ -1,8 +1,8 @@
 <?php
 
 return array(
-    'site_name' => 'Ashgabat passenger motor transport enterprise',
-    'site_name2' => 'Türkmenawtoulaglary agentligi',
+    'site_name' => 'DaşoguzAwtoulag',
+    'site_name2' => 'Önümçilik birleşigi',
     //header
     'select_language' => 'Select language',
     'Pay Attention' => 'Üns beriň!',

@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use common\components\CommonController;
 use common\models\ItemLang;
+use common\models\Item;
 use iutbay\yii2kcfinder\KCFinder;
 use Yii;
 use common\models\wrappers\ItemWrapper;
@@ -163,14 +164,16 @@ class ItemController extends CommonController
         }
 
 
-        $model = $this->findModel($id);
+        $model = Item::find()->where(['id' => $id])->all();
         $documents = $model->documents;
         if (isset($documents)) {
             foreach ($documents as $doc) {
                 $doc->fullDelete('tbl_item_to_document');
             }
         }
-        $model->delete();
+        foreach($model as $one){
+        $one->delete();
+        }
 
         return $this->redirect(['index']);
     }

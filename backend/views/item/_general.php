@@ -42,25 +42,27 @@ echo $this->render('_content', [
     'form' => $form,
 ])
 ?>
-<?=$form->field($model, 'date_event' )->widget(DatePicker::classname(), [
-    'options' => ['placeholder' => 'Enter birth date ...'],
-    'pluginOptions' => [
-        'autoclose'=>true,
-        'format' => 'dd-mm-yyyy',
-        'todayHighlight' => true,
+<?php 
+// echo $form->field($model, 'date_event' )->widget(DatePicker::classname(), [
+//     'options' => ['placeholder' => 'Enter birth date ...'],
+//     'pluginOptions' => [
+//         'autoclose'=>true,
+//         'format' => 'dd-mm-yyyy',
+//         'todayHighlight' => true,
 
-    ]
-])->label('Çäraniň geçiriljek wagty');
+//     ]
+// ])->label('Çäraniň geçiriljek wagty');
 ?>
-<?=$form->field($model, 'date_created' )->widget(DatePicker::classname(), [
-    'options' => ['placeholder' => 'Enter birth date ...'],
-    'pluginOptions' => [
-        'autoclose'=>true,
-        'format' => 'dd-mm-yyyy',
-        'todayHighlight' => true,
+<?php 
+// echo $form->field($model, 'date_created' )->widget(DatePicker::classname(), [
+//     'options' => ['placeholder' => 'Enter birth date ...'],
+//     'pluginOptions' => [
+//         'autoclose'=>true,
+//         'format' => 'dd-mm-yyyy',
+//         'todayHighlight' => true,
 
-    ]
-])->label('Hacan döredildi');
+//     ]
+// ])->label('Hacan döredildi');
 ?>
 
 

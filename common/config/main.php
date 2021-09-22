@@ -34,15 +34,15 @@ return [
             'siteKey' => '6LfSKZ0UAAAAAHDE7aU5BLotXx6fKeBzhJZZI2Ks',
             'secret' => '6LfSKZ0UAAAAAMMjk39GjiH6BXgvdA5e3gIOnAsI',
         ],
-       'assetManager' => [
-           'bundles' => [
-               'yii\web\JqueryAsset' => [
-                   'sourcePath' => null, // do not publish the bundle
-                   'js' => ['//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',]
-//                    'js' => [ '/roomstorent/backend/js/jquery.min.js', ]
-               ],
-           ],
-       ],
+//        'assetManager' => [
+//            'bundles' => [
+//                'yii\web\JqueryAsset' => [
+//                    'sourcePath' => null, // do not publish the bundle
+//                    // 'js' => ['//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',]
+// //                    'js' => [ '/roomstorent/backend/js/jquery.min.js', ]
+//                ],
+//            ],
+//        ],
         'mobileDetect' => [
             'class' => '\skeeks\yii2\mobiledetect\MobileDetect'
         ],

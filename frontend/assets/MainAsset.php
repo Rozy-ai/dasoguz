@@ -23,14 +23,13 @@ class MainAsset extends AssetBundle
 
     public $js = [
 //        Scripts
-        'source/js/jquery-3.3.1.min.js',
+        // 'source/js/jquery-3.3.1.min.js',
         'source/js/owl.carousel.js',
         'source/js/jquery.magnific-popup.min.js',
         'source/js/jquery.waypoints.min.js',
         'source/js/jquery.countup.js',
         'source/js/bootstrap.min.js',
         'source/js/splide.min.js',
-
     ];
 
 
@@ -39,7 +38,7 @@ class MainAsset extends AssetBundle
     ];
     
     public $depends = [
-        // 'yii\web\JqueryAsset',
+        'yii\web\JqueryAsset',
         // 'yii\web\YiiAsset',
         // 'yii\bootstrap\BootstrapAsset',
         // 'yii\bootstrap\BootstrapPluginAsset',
