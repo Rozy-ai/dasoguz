@@ -75,7 +75,7 @@ return array(
 
     'Categories' => 'Страницы',
     'Overview' => 'Maglumat',
-    'About Us' => 'Biz barada',
+    'About Us' => 'О нас',
     'Informations' => 'Düzgünler',
 
     'Events' => 'Репертуары',

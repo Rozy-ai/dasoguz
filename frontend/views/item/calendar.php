@@ -22,13 +22,15 @@ $this->params['breadcrumbs'][] = Yii::$app->controller->truncate('', 8, 65);
                                     <?php
                     $category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'news'])->one();
 $catId = $category->id;
+
 $events = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('id DESC')->all();
                     foreach ($events as $event):
                         $href = $event->url;
+                        $path = $event->getThumbPath();
                         ?>
                 <a href="<?= $href ?>" class="row pb-4 my-4 pr-4">
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img src="<?= $event->getThumbPath(80, 50, 'w', true, false, true) ?>" class="singleNews-img" alt="<?=$event->title ?>">
+                        <?=\yii\helpers\Html::img($path, ['alt' => "$event->title", 'class' => 'singleNews-img'])?>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12"> 
                         <div class="pb-1 pl-0" style="color: #000">

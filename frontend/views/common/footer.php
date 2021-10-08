@@ -24,7 +24,7 @@ $routes = Route::find()->limit(4)->all();
                                 <span class="fa fa-globe"></span> <?= yii::t('app', 'site_name') ?> <span class="logo"><?= yii::t('app', 'site_name2') ?></span></a>
                         </div>
                         <ul>
-                            <li><a href="<?= $ownInfo->my_phone ?>"><span class="fa fa-phone"></span> <?= $ownInfo->my_phone ?></a></li>
+                            <li><a href="tel:<?= $ownInfo->my_phone ?>"><span class="fa fa-phone"></span> <?= $ownInfo->my_phone ?></a></li>
                             <li><a href="mailto:<?= $ownInfo->my_email ?>" class="mail"><span class="fa fa-envelope-open-o"></span>
                                 <?= $ownInfo->my_email ?></a></li>
                         </ul>
@@ -33,7 +33,7 @@ $routes = Route::find()->limit(4)->all();
 
                         <ul>
                             <h6 class="footer-title-29">Edara</h6>
-                            <li><a href="<?='/site/a/about'?>"><?= Yii::t('app', 'About Us') ?></a></li>
+                            <li><a href="<?='/item/939'?>"><?= Yii::t('app', 'About Us') ?></a></li>
                             <li><a href="<?= '/item/news'?>"> Täzelikler</a></li>
                             <!-- <li><a href="#pricing"> Etraplara gatnawlar</a></li> -->
                             <li><a href="<?='/site/a/contact' ?>"><?= Yii::t('app', 'Contact') ?></a></li>

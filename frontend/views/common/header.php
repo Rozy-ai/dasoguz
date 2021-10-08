@@ -10,7 +10,7 @@ use yii\widgets\Menu;
 $ownInfo = OwnerContactWrapper::find()->one();
 $menuItems[0] = ['label' => Yii::t('app', 'Home'), 'url' => ['/']];
 // $menuItems[0] = ['label' => Yii::t('app', 'News'), 'url' => ['/item/about']];
-$menuItems[] = ['label' => Yii::t('app', 'About Us'), 'url' => ['/site/about']];
+// $menuItems[] = ['label' => Yii::t('app', 'About Us'), 'url' => ['/site/about']];
 $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
 
 

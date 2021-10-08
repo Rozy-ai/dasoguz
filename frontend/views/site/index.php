@@ -70,7 +70,6 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
                         <span class="text mb-2">Amatly we ýokary hilli awtobus hyzmatlary.</span>
                         <h3 class="title-big">Siziň ygtybarly awtoulag hyzmat ediş gullugyňyz.</h3>
                         <p class="mt-4">Ýurdumyzyň awtobuslarynyň sany gün saýyn artýar.</p>
-                        <a href="about" class="btn btn-style btn-effect mt-lg-5 mt-4">Biz barada</a>
                     </div>
                     <div class="col-lg-6 left-wthree-img text-lg-right mt-lg-0 mt-2">
                         <div class="position-relative">
