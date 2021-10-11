@@ -3,7 +3,7 @@
 return array(
     'site_name' => 'DaşoguzAwtoulag',
     'site_name2' => 'Önümçilik birleşigi',
-    'Site description' => 'özişim.com türkmen we rus dillerinde maliýe we ykdysadyýet barada gyzykly makalalary, biznes ideýalary, çözgütleri, ýakynda boljak işewir wakalaryň senenamasyny ýöredýän internet žurnal.',
+    'Site description' => 'DaşoguzAwtoulag',
     'Home' => 'Baş sahypa',
     'Contact us' => 'Habarlaşmak',
     'clips' => 'Kliplar',
@@ -134,7 +134,7 @@ return array(
     'Reason' => 'Sebäbi',
     'Back to dashboard' => 'Baş sahypa dolanmak',
     'Payment with this number was not found' => 'Bu belgili geçirilen töleg tapylmady',
-    'When using materials from the site link to ozisim.com is required!' => 'Saýtdaky materiýallar ulanylan ýagdaýynda salgylanmak şertdir!',
+    'When using materials from the site link to is required!' => 'Saýtdaky materiýallar ulanylan ýagdaýynda salgylanmak şertdir!',
 
     // ozisim
     'Top read' => 'Iň köp okalan',
@@ -340,6 +340,15 @@ return array(
     'Ordering' => 'Sargyt etmek',
     'Duration order' => ' Sargydyň dowamlylygy',
     'Vehicle destination' => 'Ulagyň barmaly ýeri',
+    'Read more' => 'Doly okaň',
+    'Shipping' => 'Dürli ýükleri daşamak',
+    'Passenger Transportation' => 'Ýolagçy gatnatmak',
+    'Vehicle ordering' => 'Ulag sargyt etmek',
+    'address' => 'Türkmenistan, Daşoguz welaýaty, Daşoguz şäheri, Şagadam köçesi 41.<br> 
+Tel: 9933226-07-04. <br>
+Faks: 9933226-07-04 <br>
+Poçta kody 746300<br>',
+'Pages' => 'Sahypalar',
 
 
 );

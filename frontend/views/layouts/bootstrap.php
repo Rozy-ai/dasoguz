@@ -99,10 +99,12 @@ MainAsset::register($this);
     ?>
 
     <?php $this->beginBody() ?>
-    <div class="header-wrapper">
+    
 
         <?= $this->render('//common/header', ['menuItems' => $menuItems]) ?>
-    </div>
+   
+
+
 
     <?= common\widgets\Alert::widget() ?>
 
@@ -262,6 +264,13 @@ MainAsset::register($this);
                 $('body').toggleClass('noscroll');
             })
         });
+    </script>
+    <script>
+        $(function() {
+    var path = location.pathname;
+    $("a[href='" + path + "']").addClass('active');
+    });
+
     </script>
     <!-- disable body scroll which navbar is in active -->
     </body>

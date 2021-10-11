@@ -82,25 +82,29 @@ $action_id = Yii::$app->controller->action->id;
             <?php } ?>
 
 
-            <?php if (Yii::$app->user->can('app-backend/route/index') || Yii::$app->user->can('app-backend/route/*')) { ?>
-                <li class="nav-item  ">
-                    <a href="<?= yii\helpers\Url::to(['/route/index']); ?>"
+            <?php 
+            // if (Yii::$app->user->can('app-backend/route/index') || Yii::$app->user->can('app-backend/route/*')) { 
+                ?>
+         <!--        <li class="nav-item  ">
+                    <a href="<?php //echo yii\helpers\Url::to(['/route/index']); ?>"
                        class="nav-link ">
                         <i class="fa fa-bus"></i>
-                        <span class="title"><?= Yii::t('backend', 'route') ?></span>
+                        <span class="title"><?php// echo Yii::t('backend', 'route') ?></span>
                     </a>
-                </li>
-            <?php } ?>
+                </li> -->
+            <?php// } ?>
 
-             <?php if (Yii::$app->user->can('app-backend/point/index') || Yii::$app->user->can('app-backend/point/*')) { ?>
-                <li class="nav-item  ">
-                    <a href="<?= yii\helpers\Url::to(['/point/index']); ?>"
+             <?php
+              // if (Yii::$app->user->can('app-backend/point/index') || Yii::$app->user->can('app-backend/point/*')) { 
+                ?>
+<!--                 <li class="nav-item  ">
+                    <a href="<?php //echo yii\helpers\Url::to(['/point/index']); ?>"
                        class="nav-link ">
                         <i class="fa fa-map-marker"></i>
-                        <span class="title"><?= Yii::t('backend', 'point') ?></span>
+                        <span class="title"><?php //echo Yii::t('backend', 'point') ?></span>
                     </a>
-                </li>
-            <?php } ?>
+                </li> -->
+            <?php// } ?>
 
 
             <?php if (Yii::$app->user->can('app-backend/owner-contact/index') || Yii::$app->user->can('app-backend/owner-contact/*')) { ?>

@@ -2,12 +2,12 @@
 $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['status' => '1','is_main'=>'1'])->orderBy('id DESC')->limit(3)->all();
  ?>
     <section id="home" class="w3l-banner">
-        <div class="container py-md-3">
+        <div class="container-fluid">
             <div class="text-center">
                 <div class="">
-                    <h1 class="mb-4 title">"Türkmenawtoulaglary" agentligi.</h1>
+<!--                     <h1 class="mb-4 title">"Türkmenawtoulaglary" agentligi.</h1>
                     <p class="mx-lg-5">"Daşoguzawtoulag" önümçilik birleşigi 1944-nji ýylda döredilen bolup 1997-nji ýylda Daşoguzyň önümçilik awtotransport birleşigi ady bilen hasaba alynan.</p>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-lg-12 mx-auto">
                         <div class="splide">
@@ -18,7 +18,7 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
           <?php $slider_docs =  $slider->documents; ?>
           <?php foreach ($slider_docs as $slider_doc): ?>
             <li class="splide__slide">
-        <img src="<?= '/uploads/',$slider_doc->path ?>" alt="" class="img-fluid mt-3 w-100">
+        <img src="<?= '/uploads/',$slider_doc->path ?>" alt="" class="img-fluid w-100">
      
      </li>
 
@@ -37,12 +37,16 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
         </div>
     </section>
     <!-- //banner section -->
+
+
+
+
           <?php 
-          $images_parallax = \common\models\wrappers\ImageWrapper::find()->with('translations','documents')->where(['type' => 2])->limit(1)->all();
+          // $images_parallax = \common\models\wrappers\ImageWrapper::find()->with('translations','documents')->where(['type' => 2])->limit(1)->all();
 
           ?>
 
-    <div class="w3l-about-us py-5 mt-5" style="background-image: url(<?= '/uploads/',$images_parallax[0]->document->path ?>); background-size: cover; background-attachment: fixed;background-position: 0 -15rem;">
+<!--     <div class="w3l-about-us py-5 mt-5" style="background-image: url(<?php// echo '/uploads/',$images_parallax[0]->document->path ?>); background-size: cover; background-attachment: fixed;background-position: 0 -15rem;">
         <div class="container pt-lg-5 pt-sm-4">
             <div class="maghny-gd-1">
                 <div class="row about-text">
@@ -61,15 +65,23 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
 
             </div>
         </div>
-    </div>
+    </div> -->
+    <!-- About -->
+<?php 
+$about_desc = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['id' => '939'])->one();
+
+ ?>
+
+
     <section class="w3l-index3" id="about">
         <div class="midd-w3 py-5">
             <div class="container py-lg-4 py-md-3">
                 <div class="row">
                     <div class="col-lg-6 about-right-faq align-self">
-                        <span class="text mb-2">Amatly we ýokary hilli awtobus hyzmatlary.</span>
-                        <h3 class="title-big">Siziň ygtybarly awtoulag hyzmat ediş gullugyňyz.</h3>
-                        <p class="mt-4">Ýurdumyzyň awtobuslarynyň sany gün saýyn artýar.</p>
+<!--                         <span class="text mb-2">Amatly we ýokary hilli awtobus hyzmatlary.</span> -->
+                        <h3 class="title-big"><?= $about_desc->title ?></h3>
+                        <p class="mt-4 mb-4"><?= $about_desc->description ?></p>
+                        <a href="<?= '/item/939' ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
                     </div>
                     <div class="col-lg-6 left-wthree-img text-lg-right mt-lg-0 mt-2">
                         <div class="position-relative">
@@ -81,9 +93,61 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
         </div>
     </section>
 
+<!-- End about -->
+<!-- Advantages -->
+<?php 
+$services = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['id' => '946'])->one();
+ ?>
+<section class="section pd-75">
+    <div class="container">
+        <div class="functions">
+            <div class="title_section">
+                <h1 style="flex: 1;text-align: center" class="move zoomIn"><?= $services->title ?></h1>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-4 cards">
+                    <a href="<??>">
+                        <div class="func_cards">
+                            <div class="func_card_title ">
+                                <i class="service-one__icon  fa fa-cubes"></i>
+                            </div>
+                            <h3><?= yii::t('app', 'Shipping')?> </h3>
 
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 cards">
+                    <a href="<??>">
+                        <div class="func_cards">
+                            <div class="func_card_title">
+                                <i class="service-one__icon  fa fa-group"></i>
+                            </div>
+                            <h3><?= yii::t('app', 'Passenger Transportation')?></h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 cards">
+                    <a href="<??>">
+                        <div class="func_cards box-koire move">
+                            <div class="func_card_title">
+                                <i class="service-one__icon  fa fa-life-ring"></i>
+                            </div>
+                            <h3><?= yii::t('app', 'Vehicle ordering')?></h3>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-lg-12 text-center">
+            <a href="<?= '/item/946' ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End advantages -->
     <!-- //bottom-grids-->
-    <section class="w3l-index3" id="about">
+<!--     <section class="w3l-index3" id="about">
         <div class="midd-w3 py-5">
             <div class="container py-lg-5 py-md-3">
                 <div class="row">
@@ -101,11 +165,11 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- stats -->
-    <section class="w3l-stats py-5" id="stats">
+<!--     <section class="w3l-stats py-5" id="stats">
         <div class="gallery-inner container py-md-5 py-4">
             <div class="row stats-con">
                 <div class="col-md-4 col-6 stats_info counter_grid">
@@ -125,10 +189,10 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- //stats -->
     <!-- Quote -->
-    <div class="quote py-5">
+   <!--  <div class="quote py-5">
         <div class="container py-lg-4">
             <div class="quote-left">
                 <div class="left">
@@ -138,7 +202,35 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
                 <a href="<?= '/site/a/contact' ?>" class="btn btn-style btn-effect mt-lg-0 mt-4">Biz bilen habarlaşyň</a>
             </div>
         </div>
-    </div>
+    </div> -->
+    <?php 
+                  $category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'news'])->one();
+$catId = $category->id;
+
+$news = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'0'])->orderBy('id DESC')->limit(3)->all(); 
+?>
+
+    <section class="news" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="title_section">
+                <h1 style="flex: 1;text-align: center;margin: 5% 0 3%;" class=""><?= yii::t('app', 'News') ?></h1>
+            </div>
+            <div class="card-deck">
+            <?php foreach ($news as $single): ?>
+                <a href="<?= '/item/'.$single->id ?>" class="col-md-4">
+<div class="card" style="width: 100%;height: 100%">
+
+  <img src="<?= $single->getThumbPath(); ?>" class="card-img-top" style="height: 50%" alt="<?= $single->title ?>">
+  <div class="card-body">
+    <h5 class="card-title"><?= $single->title ?></h5>
+    <p class="card-text" style="font-size: 16px"><?= $single->description ?></p>
+  </div>
+</div>
+</a>
+            <?php endforeach ;?>
+        </div>
+        </div>
+    </section>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new Splide('.splide', {
