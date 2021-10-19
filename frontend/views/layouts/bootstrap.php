@@ -25,13 +25,11 @@ MainAsset::register($this);
         }
         ?>
         <title><?= Html::encode($this->title) ?></title>
+        <link rel="shortcut icon" type="image/ico" href="<?=  '/source/images/favicon.png?v=1.0.0' ?>">
         <?= Html::csrfMetaTags() ?>
         <?php $this->head() ?>
 
-        <?php
-        $favicon = Yii::getAlias('@web') . '/source/img/logo.png';
-        ?>
-        <link rel="shortcut icon" type="image/ico" href="<?= $favicon ?>"/>
+    
 
     </head>
 

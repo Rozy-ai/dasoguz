@@ -2,7 +2,7 @@
 $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['status' => '1','is_main'=>'1'])->orderBy('id DESC')->limit(3)->all();
  ?>
     <section id="home" class="w3l-banner">
-        <div class="container-fluid">
+        <div class="container">
             <div class="text-center">
                 <div class="">
 <!--                     <h1 class="mb-4 title">"Türkmenawtoulaglary" agentligi.</h1>
@@ -106,7 +106,7 @@ $services = \common\models\wrappers\ItemWrapper::find()->with(['translations','d
             </div>
             <div class="row text-center">
                 <div class="col-md-6 col-lg-4 cards">
-                    <a href="<??>">
+          
                         <div class="func_cards">
                             <div class="func_card_title ">
                                 <i class="service-one__icon  fa fa-cubes"></i>
@@ -114,27 +114,27 @@ $services = \common\models\wrappers\ItemWrapper::find()->with(['translations','d
                             <h3><?= yii::t('app', 'Shipping')?> </h3>
 
                         </div>
-                    </a>
+              
                 </div>
                 <div class="col-md-6 col-lg-4 cards">
-                    <a href="<??>">
+             
                         <div class="func_cards">
                             <div class="func_card_title">
                                 <i class="service-one__icon  fa fa-group"></i>
                             </div>
                             <h3><?= yii::t('app', 'Passenger Transportation')?></h3>
                         </div>
-                    </a>
+              
                 </div>
                 <div class="col-md-6 col-lg-4 cards">
-                    <a href="<??>">
+             
                         <div class="func_cards box-koire move">
                             <div class="func_card_title">
                                 <i class="service-one__icon  fa fa-life-ring"></i>
                             </div>
                             <h3><?= yii::t('app', 'Vehicle ordering')?></h3>
                         </div>
-                    </a>
+           
                 </div>
 
             </div>

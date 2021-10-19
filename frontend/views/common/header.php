@@ -44,7 +44,9 @@ ul.lang_ul li {
         <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <span class="fa fa-globe"></span> DaşoguzAwtoulag <span class="logo">Önümliçil birleşigi</span></a>
+                    <div style="display: inline-block;"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
+                    <div style="display: inline-block;"></span> Daşoguzawtoulag <span class="logo">Önümliçil birleşigi</span></div>
+                    </a>
                 <!-- if logo is image enable this
                             <a class="navbar-brand" href="#index.html">
                                 <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -71,7 +73,7 @@ ul.lang_ul li {
                         <div class="inf_block cont_block">
                                         <ul class="inf_list">
                                             <li class="inf_list_item"><a href="tel:<?= $ownInfo->my_phone ?>"><i class="fa fa-phone"></i> <?= $ownInfo->my_phone ?> </a></li>
-                                            <li class="inf_list_item"><a href="mailto:<?= $ownInfo->my_email ?>"><i class="fa fa-envelope"></i>  <?= $ownInfo->my_email ?> </a></li>
+                            
 
 
 

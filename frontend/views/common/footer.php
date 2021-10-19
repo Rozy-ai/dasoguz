@@ -12,22 +12,34 @@ $services = [ 'Hyzmat 1', 'Hyzmat 2', 'Hyzmat 3' ];
 $routes = Route::find()->limit(4)->all();
 // $routepage[] = $menuItems[2];
 ?>
-
+<style>
+    section.w3l-footer-29-main .footer-title-29{
+        color: #000;
+    }
+    .w3l-footer-29-main .footer-list-29 ul li a{
+        color: #000;
+    }
+    .w3l-footer-29-main p.copy-footer-29 {
+        color: #000;
+    }
+</style>
     <!-- footer -->
-    <section class="w3l-footer-29-main" style="padding-bottom: 0">
+    <section class="w3l-footer-29-main" style="padding-bottom: 0;background-color: rgb(0 123 255 / 50%);">
         <div class="footer-29 py-5">
             <div class="container py-lg-4">
                 <div class="row footer-top-29">
-                    <div class="col-lg-4 col-md-6 col-sm-5 footer-list-29 footer-1">
+                    <div class="col-lg-5 offset-lg-1 col-md-6 col-sm-5 footer-list-29 footer-1">
                         <div class="footer-logo mb-4">
                             <a class="navbar-brand" href="<?= "/" ?>">
-                                <span class="fa fa-globe"></span> <?= yii::t('app', 'site_name') ?> <span class="logo"><?= yii::t('app', 'site_name2') ?></span></a>
+                                <div style="display: inline-block;"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
+                    <div style="display: inline-block;color: #000"></span> Daşoguzawtoulag <span class="logo">Önümliçil birleşigi</span></div>
+                            </a>
                         </div>
-                        <div style="font-size: 18px;line-height: 28px;color: var(--para-color);">
+                        <div style="font-size: 18px;line-height: 28px;color: #000;">
                            <?= yii::t('app', 'address') ?>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-7 offset-lg-1 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
+                    <div class="col-lg-3 col-md-6 col-sm-7 offset-lg-2 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
 
                         <ul>
                             <h6 class="footer-title-29"><?= yii::t('app', 'Pages') ?></h6>
@@ -37,7 +49,7 @@ $routes = Route::find()->limit(4)->all();
                             <li><a href="<?='/site/a/contact' ?>"><?= Yii::t('app', 'Contact') ?></a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-5 col-6 offset-lg-1 footer-list-29 footer-3 mt-lg-0 mt-5">
+<!--                     <div class="col-lg-3 col-md-6 col-sm-5 col-6 offset-lg-1 footer-list-29 footer-3 mt-lg-0 mt-5">
                         <h6 class="footer-title-29"><?= yii::t('app', 'Service') ?></h6>
                         <ul>
                             <li><a href="#"><?= yii::t('app', 'Shipping')?></a></li>
@@ -45,7 +57,7 @@ $routes = Route::find()->limit(4)->all();
                             <li><a href="#offer"><?= yii::t('app', 'Vehicle ordering')?></a></li>
                         </ul>
 
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -54,7 +66,7 @@ $routes = Route::find()->limit(4)->all();
     <!-- //footer -->
 
     <!-- copyright -->
-    <section class="w3l-footer-29-main w3l-copyright" style="padding-bottom: 0">
+    <section class="w3l-footer-29-main w3l-copyright" style="padding-bottom: 0;background-color: rgb(0 123 255 / 50%);">
         <div class="container">
             <div class="row bottom-copies">
            <!--      <p class="col-lg-8 copy-footer-29">© 2020 DaşoguzAwtoulag. Ähli hukuklar goralan.</p> -->
