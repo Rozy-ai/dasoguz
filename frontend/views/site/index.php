@@ -1,4 +1,6 @@
 <?php 
+use yii\helpers\Html;
+
 $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['status' => '1','is_main'=>'1'])->orderBy('id DESC')->limit(3)->all();
  ?>
     <section id="home" class="w3l-banner">
@@ -222,20 +224,26 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             <div class="title_section">
                 <h1 style="flex: 1;text-align: center;margin: 5% 0 3%;" class=""><?= yii::t('app', 'News') ?></h1>
             </div>
-            <div class="card-deck">
+            <div class="row">
             <?php foreach ($news as $single): ?>
                 <?php $date = Yii::$app->controller->renderDateToWord($single->date_created); ?>
-                <a href="<?= '/item/'.$single->id ?>" class="col-md-4">
-<div class="card" style="width: 100%;height: 100%">
 
-  <img src="<?= $single->getThumbPath(); ?>" class="card-img-top" style="height: 50%" alt="<?= $single->title ?>">
-  <div class="card-body">
-    <p class="card-text" style="font-size: 14px"><?=$date ?></p>
-    <h4 class="card-title"><?= $single->title ?></h4>
-    <p class="card-text" style="font-size: 16px"><?= $single->description ?></p>
-  </div>
-</div>
-</a>
+            <div class="col-lg-4 col-xs-12 mb-50">
+                <a class="institution-link" href="<?= '/item/'.$single->id ?>">
+                    <article class="grid-blog-post">
+                        <div class="post-thumbnail">
+                            <?=html::img($single->getThumbPath(), ['class' => 'img100 w-100 zoom'])?>
+                        </div>
+                        <div class="post-content">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            <h2><?=$single->title?></h2>
+                            <p style="position: absolute;top: 10px;color: #0099e5;font-size: 14px"><?=$date ?></p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+
             <?php endforeach ;?>
         </div>
         </div>

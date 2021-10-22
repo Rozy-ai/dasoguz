@@ -51,7 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'format' => 'html',
                 'options' => ['max-width' => '80px']
-            ], [
+            ], 
+            [
                 'attribute' => 'description',
                 'value' => function ($data) {
                     return Yii::$app->controller->truncate(strip_tags($data->content), 10, 100);
@@ -74,11 +75,31 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'parent_category_id',
             // 'visited_count',
             // 'sort_order',
-            'status',
-            'is_main',
-            'author',
+            [
+             'attribute' => 'status',
+             'value' => function($data){
+                return !$data->status ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-minus text-danger"></i>';
+             },
+             'format' => 'raw'
+            ],
+            // 'status',
+                        [
+             'attribute' => 'is_main',
+             'value' => function($data){
+                return !$data->is_main ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-minus text-danger"></i>';
+             },
+             'format' => 'raw'
+            ],
+            // 'is_main',
+            // 'author',
             // 'edited_username',
             // 'create_username',
+            [
+                'attribute' => 'date_created',
+                'value' => function ($data) {
+                    return Yii::$app->controller->renderDateToWord($data->date_created);
+                }
+            ],
             // 'date_created',
             // 'date_modified',
 

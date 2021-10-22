@@ -108,7 +108,7 @@ class ItemSearch extends ItemWrapper
             $query->andWhere(['user_id' =>$params['ItemSearch']['user_id']]);
         }
 
-        $query->orderBy('id',SORT_DESC);
+        $query->orderBy('date_created DESC');
         $query->joinWith('translations', false);
         $query->distinct();
         $query->andFilterWhere(['like', 'tbl_item_lang.title', $this->title]);

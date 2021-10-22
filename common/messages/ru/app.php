@@ -118,7 +118,7 @@ return array(
     'Freelance' => 'Фриланс',
     'Agricultural' => 'Сельскохозяйственное',
     'Service' => 'Обслуживание',
-    'Services' => 'Обслуживание',
+    'Services' => 'Услуги',
     'Technology' => 'Технология',
     'Other production' => 'Различные производства',
     'Business instruments' => 'Бизнес инструменты',
