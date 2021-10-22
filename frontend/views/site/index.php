@@ -207,7 +207,7 @@ $services = \common\models\wrappers\ItemWrapper::find()->with(['translations','d
                   $category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'news'])->one();
 $catId = $category->id;
 
-$news = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'0'])->orderBy('id DESC')->limit(3)->all(); 
+$news = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'0'])->orderBy('date_created DESC')->limit(3)->all(); 
 ?>
 
     <section class="news" style="background: var(--bg-light);">
@@ -217,12 +217,14 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             </div>
             <div class="card-deck">
             <?php foreach ($news as $single): ?>
+                <?php $date = Yii::$app->controller->renderDateToWord($single->date_created); ?>
                 <a href="<?= '/item/'.$single->id ?>" class="col-md-4">
 <div class="card" style="width: 100%;height: 100%">
 
   <img src="<?= $single->getThumbPath(); ?>" class="card-img-top" style="height: 50%" alt="<?= $single->title ?>">
   <div class="card-body">
-    <h5 class="card-title"><?= $single->title ?></h5>
+    <p class="card-text" style="font-size: 14px"><?=$date ?></p>
+    <h4 class="card-title"><?= $single->title ?></h4>
     <p class="card-text" style="font-size: 16px"><?= $single->description ?></p>
   </div>
 </div>

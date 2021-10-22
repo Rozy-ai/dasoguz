@@ -96,6 +96,10 @@ class ItemController extends CommonController
                 $date_event = new \DateTime($model->date_event);
                 $model->date_event = $date_event->format('Y-m-d H:i:s');
             }
+             if (isset($model->date_created) & $model->date_created != '') {
+                $date_created = new \DateTime($model->date_created);
+                $model->date_created = $date_created->format('Y-m-d');
+            }
             if ($model->save()) {
                 return $this->redirect(['index']);
             }
@@ -137,6 +141,10 @@ class ItemController extends CommonController
             if (isset($model->date_event) & $model->date_event != '') {
                 $date_event = new \DateTime($model->date_event);
                 $model->date_event = $date_event->format('Y-m-d H:i:s');
+            }
+             if (isset($model->date_created) & $model->date_created != '') {
+                $date_created = new \DateTime($model->date_created);
+                $model->date_created = $date_created->format('Y-m-d');
             }
             if ($model->save()) {
                 return $this->redirect(['index']);

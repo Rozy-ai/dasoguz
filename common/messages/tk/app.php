@@ -349,6 +349,7 @@ Tel: 9933226-07-04. <br>
 Faks: 9933226-07-04 <br>
 Poçta kody 746300<br>',
 'Pages' => 'Sahypalar',
+'Date' => 'Wagty',
 
 
 );

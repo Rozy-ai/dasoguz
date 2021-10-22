@@ -73,6 +73,7 @@ ul.lang_ul li {
                         <div class="inf_block cont_block">
                                         <ul class="inf_list">
                                             <li class="inf_list_item"><a href="tel:<?= $ownInfo->my_phone ?>"><i class="fa fa-phone"></i> <?= $ownInfo->my_phone ?> </a></li>
+                                            <li class="inf_list_item"><a href="#"><i class="fa fa-fax"></i> 9933226-07-04 </a></li>
                             
 
 

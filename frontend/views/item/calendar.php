@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = Yii::$app->controller->truncate('', 8, 65);
                     $category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'news'])->one();
 $catId = $category->id;
 
-$events = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('id DESC')->all();
+$events = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('date_created DESC')->all();
                     foreach ($events as $event):
                         $href = $event->url;
                         $path = $event->getThumbPath();
@@ -35,7 +35,7 @@ $events = \common\models\wrappers\ItemWrapper::find()->with(['translations','doc
                     <div class="col-lg-8 col-md-8 col-sm-12"> 
                         <div class="pb-1 pl-0" style="color: #000">
                                      <?php
-                                         $date = New DateTime($event->date_event);
+                                         $date = New DateTime($event->date_created);
                                          echo $date->format('d-m-Y');
                                ?>
                         </div>
