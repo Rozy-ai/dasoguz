@@ -67,11 +67,13 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
         </div>
     </div> -->
     <!-- About -->
-<?php 
-$about_desc = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['id' => '939'])->one();
-
- ?>
-
+        <?php 
+$category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'about'])->one();
+$catId = $category->id;
+$about_desc = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'1'])->one(); 
+$href = $about_desc->url;
+$path = $about_desc->getThumbPath();
+?>
 
     <section class="w3l-index3" id="about">
         <div class="midd-w3 py-5">
@@ -80,12 +82,12 @@ $about_desc = \common\models\wrappers\ItemWrapper::find()->with(['translations',
                     <div class="col-lg-6 about-right-faq align-self">
 <!--                         <span class="text mb-2">Amatly we ýokary hilli awtobus hyzmatlary.</span> -->
                         <h3 class="title-big"><?= $about_desc->title ?></h3>
-                        <p class="mt-4 mb-4"><?= $about_desc->description ?></p>
-                        <a href="<?= '/item/939' ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
+                        <p class="mt-4 mb-4" style="color: #000"><?= $about_desc->description ?></p>
+                        <a href="<?= $href ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
                     </div>
                     <div class="col-lg-6 left-wthree-img text-lg-right mt-lg-0 mt-2">
                         <div class="position-relative">
-                            <img src="/source/images/esasy-surat.jpg" alt="" class="radius-image img-fluid">
+                            <img src="<?=$path?>" alt="" class="radius-image img-fluid" style="max-width: 80%;">
                         </div>
                     </div>
                 </div>
@@ -96,7 +98,12 @@ $about_desc = \common\models\wrappers\ItemWrapper::find()->with(['translations',
 <!-- End about -->
 <!-- Advantages -->
 <?php 
-$services = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['id' => '946'])->one();
+  
+$category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'service'])->one();
+$catId = $category->id;
+$services = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'1'])->one(); 
+$href = $services->url;
+
  ?>
 <section class="section pd-75">
     <div class="container">
@@ -139,7 +146,7 @@ $services = \common\models\wrappers\ItemWrapper::find()->with(['translations','d
 
             </div>
             <div class="col-lg-12 text-center">
-            <a href="<?= '/item/946' ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
+            <a href="<?= $href ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
             </div>
         </div>
 

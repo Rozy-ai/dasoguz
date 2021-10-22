@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'site_name' => 'DaşoguzAwtoulag',
+    'site_name' => '"Daşoguzawtoulag"',
     'site_name2' => 'Önümçilik birleşigi',
     'Site description' => 'DaşoguzAwtoulag',
     'Home' => 'Baş sahypa',
@@ -104,7 +104,7 @@ return array(
     'Ticket Id' => 'Petek ID',
     'Payment Total Amount' => 'Bahasy',
     'Location Title' => 'Görkeziljek ýeri',
-    'All rights reserved.' => 'Ähli hukuklary goralan.',
+    'All rights reserved.' => 'Ähli hukuklar goralan.',
     'Online ticket selling apps for all theatres of Turkmenistan' => 'Türkmenistanyň ähli teatrlarynyň we Döwlet sirkiniň peteklerini onlaýn satmak ulgamy',
     'Electron ticket purchase was successful' => 'Elektron petek üstünlikli satyn aldyňyz',
     'Payment was not successful' => 'Töleg amala aşmady',
@@ -154,6 +154,7 @@ return array(
     'Freelance' => 'Frilans',
     'Agricultural' => 'Oba hojalyk',
     'Service' => 'Hyzmatlar',
+    'Services' => 'Hyzmatlarymyz',
     'Technology' => 'Tehnologiýa',
     'Other production' => 'Dürli önümçilik',
     'Business instruments' => 'Biznes gurallar',
@@ -345,9 +346,9 @@ return array(
     'Passenger Transportation' => 'Ýolagçy gatnatmak',
     'Vehicle ordering' => 'Ulag sargyt etmek',
     'address' => 'Türkmenistan, Daşoguz welaýaty, Daşoguz şäheri, Şagadam köçesi 41.<br> 
-Tel: 9933226-07-04. <br>
-Faks: 9933226-07-04 <br>
-Poçta kody 746300<br>',
+Tel: +993 322 6-07-04 <br>
+Faks: +993 322 6-07-04 <br>
+Poçta kody: 746300<br>',
 'Pages' => 'Sahypalar',
 'Date' => 'Wagty',
 

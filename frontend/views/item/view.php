@@ -44,12 +44,59 @@ $this->registerMetaTag(['property' => 'og:image', 'itemprop' => 'image', 'conten
 
                 <div class="news-details">
                     <div class="news-details-text">
+                        <?php 
+                        $category = $model->category;
+if ($category->parent_id){
+    while ($category->parent_id){
+        $category = \common\models\wrappers\CategoryWrapper::findOne($category->parent_id);
+        $catCode = $category->code;
+    }
+} else{
+    $catCode = $category->code;
+}
+                         ?>
+                        <?php if ($catCode == 'service') : ?>
+                                        <div style="margin: 3% 0 4% 0" class="row text-center">
+                <div class="col-md-6 col-lg-4 cards">
+          
+                        <div class="func_cards">
+                            <div class="func_card_title ">
+                                <i class="service-one__icon  fa fa-cubes"></i>
+                            </div>
+                            <h4 style="color: #fff"><?= yii::t('app', 'Shipping')?> </h4>
+
+                        </div>
+              
+                </div>
+                <div class="col-md-6 col-lg-4 cards">
+             
+                        <div class="func_cards">
+                            <div class="func_card_title">
+                                <i class="service-one__icon  fa fa-group"></i>
+                            </div>
+                            <h4 style="color: #fff"><?= yii::t('app', 'Passenger Transportation')?></h4>
+                        </div>
+              
+                </div>
+                <div class="col-md-6 col-lg-4 cards">
+             
+                        <div class="func_cards box-koire move">
+                            <div class="func_card_title">
+                                <i class="service-one__icon  fa fa-life-ring"></i>
+                            </div>
+                            <h4 style="color: #fff"><?= yii::t('app', 'Vehicle ordering')?></h4>
+                        </div>
+           
+                </div>
+
+            </div>
+                        <?php endif; ?>
 <?php if(!empty($path)): ?>
                         <div class="news-details-image_wrapper">
                             <div class="d-flex justify-content-start py-2">     <div class="small text-info float-left">
                                 <?php
-                                         $date = New DateTime($model->date_event);
-                                         echo $date->format('d-m-Y');
+                                         // $date = New DateTime($model->date_created);
+                                         // echo $date->format('d-m-Y');
                                 ?>
                                 </div>
                             </div>
@@ -65,8 +112,7 @@ $this->registerMetaTag(['property' => 'og:image', 'itemprop' => 'image', 'conten
                     </div>
                 </div>
             </div>
-
-            <?php if($categoryModel->code !=  informations): ?>
+            <?php if($categoryModel->code !=  about && $categoryModel->code !=  service): ?>
             <div class="border-bottom my-4" style="font-family: 'Rubik Regular'; font-size: 1.8rem">
         <?= yii::t('app','Related') ?>
       </div>

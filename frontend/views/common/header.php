@@ -45,7 +45,7 @@ ul.lang_ul li {
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <div style="display: inline-block;"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
-                    <div style="display: inline-block;"></span> Daşoguzawtoulag <span class="logo">Önümliçil birleşigi</span></div>
+                    <div style="display: inline-block;"></span> <?= yii::t('app','site_name') ?> <span class="logo"><?= yii::t('app','site_name2') ?></span></div>
                     </a>
                 <!-- if logo is image enable this
                             <a class="navbar-brand" href="#index.html">
@@ -72,8 +72,8 @@ ul.lang_ul li {
 
                         <div class="inf_block cont_block">
                                         <ul class="inf_list">
-                                            <li class="inf_list_item"><a href="tel:<?= $ownInfo->my_phone ?>"><i class="fa fa-phone"></i> <?= $ownInfo->my_phone ?> </a></li>
-                                            <li class="inf_list_item"><a href="#"><i class="fa fa-fax"></i> 9933226-07-04 </a></li>
+                                            <li class="inf_list_item"><a href="tel:<?= $ownInfo->my_phone ?>"><i class="fa fa-phone"></i> +993 322 6-07-04 </a></li>
+                                            <li class="inf_list_item"><a href="#"><i class="fa fa-fax"></i> +993 322 6-07-04  </a></li>
                             
 
 

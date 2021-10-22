@@ -7,11 +7,13 @@ use common\models\Route;
 use yii\helpers\Url;
 
 // $ownInfo = \common\models\OwnerContact::find()->one();
-$serviceItems = ItemWrapper::find()->joinWith('category cat')->where(['cat.code' => 'service', 'tbl_item.status' => 1])->limit(5)->all();
-$services = [ 'Hyzmat 1', 'Hyzmat 2', 'Hyzmat 3' ];
-$routes = Route::find()->limit(4)->all();
+// $serviceItems = ItemWrapper::find()->joinWith('category cat')->where(['cat.code' => 'service', 'tbl_item.status' => 1])->limit(5)->all();
+// $services = [ 'Hyzmat 1', 'Hyzmat 2', 'Hyzmat 3' ];
+// $routes = Route::find()->limit(4)->all();
 // $routepage[] = $menuItems[2];
+$menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
 ?>
+
 <style>
     section.w3l-footer-29-main .footer-title-29{
         color: #000;
@@ -25,14 +27,14 @@ $routes = Route::find()->limit(4)->all();
 </style>
     <!-- footer -->
     <section class="w3l-footer-29-main" style="padding-bottom: 0;background-color: rgb(0 123 255 / 50%);">
-        <div class="footer-29 py-5">
+        <div class="footer-29">
             <div class="container py-lg-4">
                 <div class="row footer-top-29">
                     <div class="col-lg-5 offset-lg-1 col-md-6 col-sm-5 footer-list-29 footer-1">
                         <div class="footer-logo mb-4">
                             <a class="navbar-brand" href="<?= "/" ?>">
                                 <div style="display: inline-block;"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
-                    <div style="display: inline-block;color: #000"></span> Daşoguzawtoulag <span class="logo">Önümliçil birleşigi</span></div>
+                    <div style="display: inline-block;color: #000"></span> <?= yii::t('app','site_name') ?> <span class="logo"><?= yii::t('app','site_name2') ?></span></div>
                             </a>
                         </div>
                         <div style="font-size: 18px;line-height: 28px;color: #000;">
@@ -43,10 +45,17 @@ $routes = Route::find()->limit(4)->all();
 
                         <ul>
                             <h6 class="footer-title-29"><?= yii::t('app', 'Pages') ?></h6>
-                            <li><a href="<?='/item/939'?>"><?= Yii::t('app', 'About Us') ?></a></li>
-                            <li><a href="<?= '/item/news'?>"> <?= yii::t('app', 'News') ?></a></li>
-                            <!-- <li><a href="#pricing"> Etraplara gatnawlar</a></li> -->
-                            <li><a href="<?='/site/a/contact' ?>"><?= Yii::t('app', 'Contact') ?></a></li>
+                            <?php
+                    echo Menu::widget([
+                        'items' => $menuItems,
+                        'options' => [
+                            'class' => '',
+                        ],
+                    'linkTemplate' => "<li><a href=\"{url}\" class=''>{label}</a></li>",
+                    'itemOptions' => ['class' => ''],
+                    ]);
+                    ?>
+
                         </ul>
                     </div>
 <!--                     <div class="col-lg-3 col-md-6 col-sm-5 col-6 offset-lg-1 footer-list-29 footer-3 mt-lg-0 mt-5">
@@ -70,7 +79,7 @@ $routes = Route::find()->limit(4)->all();
         <div class="container">
             <div class="row bottom-copies">
            <!--      <p class="col-lg-8 copy-footer-29">© 2020 DaşoguzAwtoulag. Ähli hukuklar goralan.</p> -->
-                <p class="col-lg-8 copy-footer-29">&copy;<?= date('Y') ?><?=yii::t('app', 'site_name')?>. <?= Yii::t('app','All rights reserved.') ?>  </p>
+                <p class="col-lg-8 copy-footer-29">&copy; <?= date('Y') ?>. <?= Yii::t('app','All rights reserved.') ?>  </p>
 
                 <div class="col-lg-4 main-social-footer-29">
                     <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
