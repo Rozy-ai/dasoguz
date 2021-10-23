@@ -11887,7 +11887,7 @@ form.signin-form {
     color:#fff;
 }
 .func_cards:hover{
-    cursor: pointer;
+  /*  cursor: pointer;*/
 /*    color: #000;*/
 }
 .func_cards:hover p {

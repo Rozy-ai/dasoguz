@@ -36,11 +36,13 @@ $this->registerMetaTag(['property' => 'og:image', 'itemprop' => 'image', 'conten
 
 <div class="content" style="padding: 50px 0;">
     <div class="container">
-        <div class="row py-lg-4 py-md-4 py-sm-0 position-relative">
+        <div class="row position-relative">
             <div class="col-lg-9 col-md-9 col-sm-12">
+                <?php if($categoryModel->code !=  about && $categoryModel->code !=  service): ?>
                 <div class="news-details_title">
         <?=Html::encode($model->title)?>
       </div>
+  <?php endif; ?>
 
                 <div class="news-details">
                     <div class="news-details-text">

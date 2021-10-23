@@ -257,3 +257,5 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             }).mount();
         });
     </script>
+
+    

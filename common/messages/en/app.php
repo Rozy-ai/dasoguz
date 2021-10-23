@@ -1,8 +1,8 @@
 <?php
 
 return array(
-    'site_name' => '"Daşoguzawtoulag"',
-    'site_name2' => 'Önümçilik birleşigi',
+    'site_name' => '"Dashoguzawtoulag"',
+    'site_name2' => 'Production association',
     //header
     'select_language' => 'Select language',
     'Pay Attention' => 'Üns beriň!',
@@ -46,11 +46,12 @@ return array(
     'On map' => 'Show map',
     'Home' => 'Home',
     'route_no' => 'Number',
-        'address' => '41 Shagadam, Dashoguz city, Dashoguz velayat, Turkmenistan<br>
+        'address' => '41 Shagadam, Dashoguz city,<br> Dashoguz velayat, Turkmenistan<br><br>
 Phone: +993 322 6-07-04 <br>
 Fax: +993 322 6-07-04 <br>
 Index: 746300<br>
 ',
+    'Shipping' => 'Shipping<br><br>',
 
 );
 ?>

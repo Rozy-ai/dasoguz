@@ -34,7 +34,7 @@ $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']]
                         <div class="footer-logo mb-4">
                             <a class="navbar-brand" href="<?= "/" ?>">
                                 <div style="display: inline-block;"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
-                    <div style="display: inline-block;color: #000"></span> <?= yii::t('app','site_name') ?> <span class="logo"><?= yii::t('app','site_name2') ?></span></div>
+                    <div style="display: inline-block;color: #000"></span> <?= yii::t('app','site_name') ?> <span class="logo" style="color: #000;font-weight: normal;"><?= yii::t('app','site_name2') ?></span></div>
                             </a>
                         </div>
                         <div style="font-size: 18px;line-height: 28px;color: #000;">

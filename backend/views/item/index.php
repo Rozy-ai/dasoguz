@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
              'attribute' => 'status',
              'value' => function($data){
-                return !$data->status ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-minus text-danger"></i>';
+                return $data->status ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-minus text-danger"></i>';
              },
              'format' => 'raw'
             ],
@@ -86,7 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         [
              'attribute' => 'is_main',
              'value' => function($data){
-                return !$data->is_main ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-minus text-danger"></i>';
+                return $data->is_main ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-minus text-danger"></i>';
              },
              'format' => 'raw'
             ],

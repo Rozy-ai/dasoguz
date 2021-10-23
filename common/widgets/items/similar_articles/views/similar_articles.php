@@ -18,7 +18,7 @@ if (isset($items) && count($items) > 1) { ?>
         <div class="related-page">
             <div class="related-page-image-wrapper">
                 <?php
-                $imgsrc = $data->getThumbPath(350, 220, 'w', true, false, true);
+                $imgsrc = $data->getThumbPath();
                 echo Html::img($imgsrc, ['alt' => "$data->title"]);
                 ?>
             </div>

@@ -345,7 +345,7 @@ return array(
     'Shipping' => 'Dürli ýükleri daşamak',
     'Passenger Transportation' => 'Ýolagçy gatnatmak',
     'Vehicle ordering' => 'Ulag sargyt etmek',
-    'address' => 'Türkmenistan, Daşoguz welaýaty, Daşoguz şäheri, Şagadam köçesi 41.<br> 
+    'address' => 'Türkmenistan, Daşoguz welaýaty,<br> Daşoguz şäheri, Şagadam köçesi 41.<br> <br>
 Tel: +993 322 6-07-04 <br>
 Faks: +993 322 6-07-04 <br>
 Poçta kody: 746300<br>',
