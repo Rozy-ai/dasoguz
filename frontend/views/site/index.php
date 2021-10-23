@@ -107,7 +107,7 @@ $services = \common\models\wrappers\ItemWrapper::find()->with(['translations','d
 $href = $services->url;
 
  ?>
-<section class="section pd-75">
+<section class="section pd-75" style="background: var(--bg-light);">
     <div class="container">
         <div class="functions">
             <div class="title_section">
@@ -219,7 +219,7 @@ $catId = $category->id;
 $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'0'])->orderBy('date_created DESC')->limit(3)->all(); 
 ?>
 
-    <section class="news" style="background: var(--bg-light);">
+    <section class="news">
         <div class="container">
             <div class="title_section">
                 <h1 style="flex: 1;text-align: center;margin: 5% 0 3%;" class=""><?= yii::t('app', 'News') ?></h1>
