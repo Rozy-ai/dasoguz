@@ -101,6 +101,7 @@ a.news-additional-item-title:hover {
     text-decoration: none;
 }
 .news-details_title {
+    font-weight: bold;
     text-align: left;
     font-family: "Rubik Medium";
     font-size: 1.5rem;

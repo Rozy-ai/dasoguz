@@ -9627,8 +9627,7 @@ p {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  line-height: 28px;
-  color: var(--para-color); }
+  line-height: 28px; }
 
 li {
   list-style-type: none; }
@@ -12000,7 +11999,6 @@ section.news .institution-link{
 .post-thumbnail {
     position: relative;
     overflow: hidden;
-     height: 225px;
     -webkit-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
 }

@@ -106,7 +106,7 @@ if ($category->parent_id){
                 <a class="institution-link" href="<?= $path ?>">
                     <article class="grid-blog-post" style="border: none;">
                         <div class="post-thumbnail">
-                            <?=html::img($path, ['class' => 'img100 w-100 h-100', 'style' => 'border-radius:5px'])?>
+                            <?=html::img($path, ['class' => 'img100 w-100 h-100', 'style' => 'border-radius:5px;min-height:225px'])?>
                         </div>
 
                     </article>
