@@ -102,7 +102,7 @@ if ($category->parent_id){
                                 ?>
                                 </div>
                             </div>
-        <div class="col-lg-5 col-xs-12 mb-50">
+        <div class="col-lg-5 col-xs-12" style="margin-bottom: 50px">
                 <a class="institution-link" href="<?= $path ?>">
                     <article class="grid-blog-post" style="border: none;">
                         <div class="post-thumbnail">
