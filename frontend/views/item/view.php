@@ -102,8 +102,18 @@ if ($category->parent_id){
                                 ?>
                                 </div>
                             </div>
-                            
-                        <?=\yii\helpers\Html::img($path, ['alt' => "$model->title", 'class' => 'news-detals-image'])?>
+        <div class="col-lg-5 col-xs-12 mb-50">
+                <a class="institution-link" href="<?= $path ?>">
+                    <article class="grid-blog-post" style="border: none;">
+                        <div class="post-thumbnail">
+                            <?=html::img($path, ['class' => 'img100 w-100 h-100', 'style' => 'border-radius:5px'])?>
+                        </div>
+
+                    </article>
+                </a>
+            </div>
+                        
+
                          </div>
                     <?php endif; ?>
                     
