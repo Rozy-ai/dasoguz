@@ -132,7 +132,7 @@ class CommonActiveRecord extends ActiveRecord
 
 
 
-    public function getThumbPath($width = null, $height = null, $type = '', $is_cropped = false, $with_watermark = false, $with_no_image = false, $code = null)
+    public function getThumbPath($width = null, $height = null, $type = '', $is_cropped = true, $with_watermark = false, $with_no_image = false, $code = null)
     {
         $thumb = "";
         $document = $this->getDocument($code);
