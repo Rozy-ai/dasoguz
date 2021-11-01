@@ -231,8 +231,8 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             <div class="col-lg-4 col-xs-12 mb-50">
                 <a class="institution-link" href="<?= '/item/'.$single->id ?>">
                     <article class="grid-blog-post">
-                        <div class="post-thumbnail">
-                            <?=html::img($single->getThumbPath(), ['class' => 'img100 w-100 zoom'])?>
+                        <div class="post-thumbnail" style="height: 225px">
+                            <?=html::img($single->getThumbPath(), ['class' => 'img100 w-100 zoom','style' => 'height:100%;object-fit:cover'])?>
                         </div>
                         <div class="post-content">
                             <i class="fa fa-chevron-right" aria-hidden="true"></i>
