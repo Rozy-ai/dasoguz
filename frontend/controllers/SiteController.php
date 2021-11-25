@@ -163,7 +163,6 @@ class SiteController extends CommonController
         ]);
 
     }
-
     /**
      * Logs in a user.
      *
