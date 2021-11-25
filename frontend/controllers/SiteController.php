@@ -535,6 +535,9 @@ class SiteController extends CommonController
         }
     }
 
-
+    public function actionPrivacyPolicy()
+    {
+        return $this->render('privacy-policy');
+    }
 
 }
