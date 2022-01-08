@@ -20,10 +20,6 @@ $this->params['breadcrumbs'][] = Yii::$app->controller->truncate('', 8, 65);
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-12 pl-3">
                                     <?php
-                    $category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'news'])->one();
-$catId = $category->id;
-
-$events = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('date_created DESC')->all();
                     foreach ($events as $event):
                         $href = $event->url;
                         $path = $event->getThumbPath();
@@ -49,7 +45,8 @@ $events = \common\models\wrappers\ItemWrapper::find()->with(['translations','doc
                 </a>
                 <?php endforeach;?>
                     <?php
-                    echo LinkPager::widget([
+                    echo 
+                    LinkPager::widget([
                         'pagination' => $pages,
                     ]);
                     ?>

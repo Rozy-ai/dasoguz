@@ -18,7 +18,8 @@ $this->params['breadcrumbs'][] = ['label' => Yii::$app->controller->truncate($mo
 
 $href = $model->url;
 $author = (isset($model->author) && strlen(trim($model->author)) > 0) ? $model->author : $model->create_username;
-$date = $model->renderDateToWord($model->date_created);
+// $date = $model->renderDateToWord($model->date_created);
+$date = Yii::$app->controller->renderDateToWord($model->date_created); 
 
 $path = $model->getThumbPath();
 list($width, $height) = getimagesize($path);
@@ -42,6 +43,7 @@ $this->registerMetaTag(['property' => 'og:image', 'itemprop' => 'image', 'conten
                 <div class="news-details_title">
         <?=Html::encode($model->title)?>
       </div>
+      <p style="color: #0099e5;font-size: 14px"><?=$date ?></p>
   <?php endif; ?>
 
                 <div class="news-details">

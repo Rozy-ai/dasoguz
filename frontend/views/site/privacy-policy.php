@@ -15,7 +15,7 @@ $item = \common\models\wrappers\ItemWrapper::findOne(1007);
 ?>
 <!-- product-details-area are start-->
 
-<div class="container">
+<div class="container" style="margin-top: 60px;margin-bottom: 80px">
     <div class="row">
         <div class="col-md-12">
             <div class="page-header">

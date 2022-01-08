@@ -248,3 +248,36 @@ section.service_list_page {
     margin-bottom: 40px;
     padding: 0;
 }
+
+
+ul.pagination{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+ul.pagination li.active a {
+    z-index: 3;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+ul.pagination li a {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+ul.pagination li.disabled span {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #6c757d;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}

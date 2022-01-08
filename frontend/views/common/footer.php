@@ -57,7 +57,7 @@ $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']]
                     ?>
                                        <?php
                                 $item = ItemWrapper::findOne(1007);
-                                echo "<li>";
+                                echo "<li style:'margin-top:10px'>";
                                 echo html::a($item->title, '/privacy-policy', ['']);
                                 echo "</li>";
                                 ?>

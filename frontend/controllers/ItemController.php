@@ -73,32 +73,23 @@ class ItemController extends CommonController {
             }
         }
         $viewpath = 'index';
-        if ($modelCategory->code == 'calendar' || $modelCategory->code == 'tenders' || $modelCategory->code = 'events'){
-            $events = ItemWrapper::find()
-                ->andWhere(['not', ['date_event' => null]])
-                ->andWhere('date_event >= NOW()');
-            $children = $modelCategory->children;
-            if (is_array($children) && count($children) !== 0){
-                $events->andWhere('category_id ='.$modelCategory->id.' or '. 'parent_category_id='.$modelCategory->id);
-            } else{
-                $events->andWhere( ['category_id' => $modelCategory->id]);
-            }
+        if ( $modelCategory->code = 'news'){
 
+                 $category = CategoryWrapper::find()->where(['code' => 'news'])->one();
+$catId = $category->id;
 
-                $events->joinWith('translations')
-                ->andWhere(['not', ['tbl_item_lang.title' => null]])
-                ->andWhere(['tbl_item_lang.language' => \Yii::$app->language])
-                ->orderBy('date_event DESC');
+$events = ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('date_created DESC')->all();
 
             $pageSize = 10;
-            $countQuery = clone $events;
-            $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => $pageSize]);
-            $events = $events->offset($pages->offset)
-                ->limit($pages->limit)
-                ->all();
+            $countQuery = count($events);
+            $pages = new Pagination(['totalCount' => $countQuery, 'pageSize' => $pageSize,
+                'forcePageParam' => false, 'pageSizeParam' => false]);
+
+$events = ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('date_created DESC')->offset($pages->offset)->limit($pages->limit)->all();
+
+
 
             $categoryModel = CategoryWrapper::find()->where(['code' => $modelCategory->code])->one();
-
 
             return $this->render('calendar', [
                 'events' => $events,
