@@ -130,7 +130,7 @@ class SiteController extends CommonController
     {
         $ownInfo = OwnerContactWrapper::find()->one();
         $model = new ContactWrapper();
-       
+       $sliders = ImageWrapper::find()->with(['translations','documents'])->where(['type' => ImageWrapper::IMAGE_SLIDER])->all();
 
    
         if ($model->load(Yii::$app->request->post())) {
@@ -159,6 +159,7 @@ class SiteController extends CommonController
             'routes' => $routes,
             'transfers' => $transfers,
             'search' => $search,
+            'sliders' => $sliders,
 
         ]);
 

@@ -1,7 +1,5 @@
 <?php 
 use yii\helpers\Html;
-
-$sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['status' => '1','is_main'=>'1'])->orderBy('id DESC')->limit(3)->all();
  ?>
     <section id="home" class="w3l-banner">
         <div class="container">
@@ -15,19 +13,29 @@ $sliders = \common\models\wrappers\ItemWrapper::find()->with(['translations','do
                         <div class="splide">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <?php foreach ($sliders as $slider): ?>
-
-          <?php $slider_docs =  $slider->documents; ?>
-          <?php foreach ($slider_docs as $slider_doc): ?>
+                                        <?php foreach ($sliders as $key => $slider): ?>
+<?php $documents = $slider->documents; 
+foreach($documents as $document): ?>
+<?php $slds[] = $document->getThumb() ?>
+<?php endforeach ?>
+    <?php 
+    $language = yii::$app->language;
+    if ($language == 'ru') {
+      $imagePath = $slds[1];
+    } elseif ($language == 'en') {
+      $imagePath = $slds[2];
+    } else {
+      $imagePath = $slds[0];
+    }
+    unset($slds);
+    ?>
             <li class="splide__slide">
-        <img src="<?= '/uploads/',$slider_doc->path ?>" alt="" class="img-fluid w-100">
+
+
+            <div class="slider_text_block">
+        <img src="<?= $imagePath ?>" alt="" class="img-fluid w-100">
      
      </li>
-
-             <?php endforeach; ?>
-                                
-                                      
-                                   
                                     <?php endforeach ?>
                                     
                                 </ul>

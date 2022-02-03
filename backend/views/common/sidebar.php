@@ -59,6 +59,14 @@ $action_id = Yii::$app->controller->action->id;
                             </li>
                         <?php } ?>
 
+                    <li class="nav-item  ">
+                        <a href="<?= yii\helpers\Url::to(['/image/index', 'ImageSearch[type]' => \common\models\wrappers\ImageWrapper::IMAGE_SLIDER]); ?>"
+                           class="nav-link ">
+                            <i class="fa fa-image"></i>
+                            <span class="title"><?= Yii::t('backend', 'Slider') ?></span>
+                        </a>
+                    </li>
+
 
                         <li class="nav-item  ">
                             <a href="<?= yii\helpers\Url::to(['/image/index', 'ImageSearch[type]' => \common\models\wrappers\ImageWrapper::IMAGE_VIDEO]); ?>"
