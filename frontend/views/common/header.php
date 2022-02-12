@@ -6,6 +6,7 @@ use yii\bootstrap\Nav;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Menu;
+use yii\bootstrap\ActiveForm;
 
 $ownInfo = OwnerContactWrapper::find()->one();
 $menuItems[0] = ['label' => Yii::t('app', 'Home'), 'url' => ['/']];
@@ -16,7 +17,7 @@ $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']]
 
 ?>
 <style>
-    header div.lang_img img{
+    .header_top div.lang_img img{
   width: 30px;
   height: 20px;
   margin-top: 2px;
@@ -37,16 +38,42 @@ ul.lang_ul li {
 .language_box {
     margin-top: -30px;
 }
+.inf_block{
+    background: #116B30;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
 </style>
+<div class="header_top" style="background: #EEF6FF;">
+    <div class="container">
+        <div class="row justify-content-end align-items-center">
+            
+                <i style="color: #333" class="fa fa-envelope-o"></i> <a style="color: #333;font-family: 'Montserrat', sans-serif;" href="mailto:<?= $ownInfo->my_email ?> ?>"><?= $ownInfo->my_email ?></a>
+    
+            <div class="lang_img" style="margin: 5px 0 7px 20px;">
+                <?php
+                echo \common\widgets\language\LanguageSwitcherDropdownWidget::widget([
+                   // 'showFlags' => true
+                ]);0                        
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="header-wrapper">
-    <header class="w3l-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                    <header class="w3l-header">
         <!--/nav-->
         <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
             <div class="container">
-                <a class="navbar-brand" href="/">
-                    <div style="display: inline-block;"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
-                    <div style="display: inline-block;"></span> <?= yii::t('app','site_name') ?> <span class="logo"><?= yii::t('app','site_name2') ?></span></div>
+              
+                <a class="navbar-brand active d-flex align-items-center" href="/">
+                    <div style="display: inline-block;margin-right: 15px"><img src="<?= '/source/images/logo.png' ?>" alt="Logo"></div>
+                    <div style="display: inline-block;font-size: 20px;color: #333;font-family: Montserrat;line-height: 28px;font-weight: 700;text-transform: uppercase;">  <?= yii::t('app','site_name') ?> <br> <?= yii::t('app','site_name2') ?></div>
                     </a>
+                  
                 <!-- if logo is image enable this
                             <a class="navbar-brand" href="#index.html">
                                 <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -57,54 +84,57 @@ ul.lang_ul li {
                     <span class="fa icon-close fa-times"></span>
                 </button>
 
-                <div class="collapse navbar-collapse top_head_right" id="navbarSupportedContent">
-<!--                     <ul class="navbar-nav ml-auto">
-                        <li class="{{ (request()->is('/')) ? 'nav-item active' : 'nav-item' }}">
-                            <a class="nav-link" href="/">Esasy sahypa</a>
-                        </li>
-                        <li class="{{ (request()->is('about')) ? 'nav-item active' : 'nav-item' }}">
-                            <a class="nav-link" href="#">Biz barada</a>
-                        </li>
-                        <li class="{{ (request()->is('contact')) ? 'nav-item active' : 'nav-item' }}">
-                            <a class="nav-link" href="contact.html">Habarlaşmak</a>
-                        </li>
-                        </ul> -->
 
-                        <div class="inf_block cont_block">
-                                        <ul class="inf_list">
-                                            <li class="inf_list_item"><a href="tel:<?= $ownInfo->my_phone ?>"><i class="fa fa-phone"></i> +993 322 6-07-04 </a></li>
-                                            <li class="inf_list_item"><a href="#"><i class="fa fa-fax"></i> +993 322 6-07-04  </a></li>
-                            
-
-
-
-                                        </ul>
-                                    </div>
-        <div class="lang_img ml-lg-3">
-                              
-                        <?php
-                        echo \common\widgets\language\LanguageSwitcherDropdownWidget::widget([
-                           // 'showFlags' => true
-                        ]);0
-                        
-                        ?>
-                 
-        </div>
-                    
-
-<!--                     <div class="ml-lg-3">
-                        <a href="#url" class="btn btn-style btn-effect">Şu taýdan başla</a>
-                    </div> -->
-                </div>
             </div>
         </nav>
+
         <!--//nav-->
     </header>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+                            <!-- BEGIN TOP SEARCH -->
+<?php
+ // $form = ActiveForm::begin([
+ //  'options' => ['class' => 'd-flex search_form'],
+ //  'action'=>['site/search'],
+ //  'method'=>'get']);
+   ?>
+
+<!--         <input style="padding: 4px 10px;" class="form-control me-2" type="search" placeholder="<?php //echo Yii::t('app','Search...')?>" aria-label="Search" class="search"  name="query">
+                  <div class="search_icon">
+                    <div class="input-group">             
+  <button type="submit" class="call_btn">
+      <span class="fa fa-search" style="color: #EE3897"></span>
+    </button>
+
+      
+      </div>
+
+          </div>    -->     
+     <?php //ActiveForm::end(); ?>
+            <!-- END TOP SEARCH -->
+                <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+<!--                     <div class="inf_block cont_block">
+                        <ul class="inf_list">
+                            <li class="inf_list_item"><a style="color: #fff" href="tel:<?php //echo $ownInfo->my_phone ?>"><i class="fa fa-phone"></i> <?php //echo $ownInfo->my_phone ?> </a></li>
+                        </ul>
+                    </div> -->
+                    <a class="navbar-brand active d-flex align-items-center" href="/">
+                    <div style="display: inline-block;font-size: 20px;color: #333;font-family: Montserrat;line-height: 28px;font-weight: 700;text-transform: uppercase;">  Halkyň arkadagly <br> zamanasy</div>
+                    <div style="display: inline-block;margin-right: 15px">
+                        <img style="width: 100px;height: 80px;margin-left: 15px" src="<?= '/source/images/logo2022.png' ?>" alt="Logo">
+                    </div>
+                    </a>
+                </div>
+                </div>
+
+</div>
+</div>
 </div>
 <div class="top-bar-wrapper visible-md visible-lg">
         <div class="inner">
             <div class="container">
-                <div class="top-bar relative">
+                <div class="top-bar relative d-flex align-items-center">
                     <div class="top-menu">
                         <nav>
                                             <?php
@@ -135,7 +165,7 @@ ul.lang_ul li {
     width: 100%;
 }
 .top-bar-wrapper .inner {
-    background: #225e7c;
+    background: #116B30;
 }
 .top-bar {
     height: 54px;
@@ -144,7 +174,6 @@ ul.lang_ul li {
     position: relative;
 }
 .top-menu > nav > ul {
-    padding: 16px 0;
         list-style: none;
 }
 .top-menu > nav > ul > li {
@@ -153,18 +182,19 @@ ul.lang_ul li {
     position: relative;
 }
 .top-menu > nav > ul > li.active > a, .top-menu > nav > ul > li:hover > a, a.uMenuItemA {
-    color: #17a2b8;
+   /* color: #17a2b8;*/
+   background: #EFEA03;
+    color: #116B30;
+    padding: 8px 15px;
+    border-radius: 5px;
 }
 .top-menu > nav > ul > li > a.active {
-    color: #17a2b8;
-    border-bottom-color: #17a2b8;
+    background: #EFEA03;
+    color: #116B30;
+    padding: 8px 15px;
+    border-radius: 5px;
 }
 
-element.style {
-}
-.top-menu > nav > ul > li.active > a, .top-menu > nav > ul > li:hover > a, a.uMenuItemA {
-    color: #17a2b8;
-}
 .top-menu > nav > ul > li.active > a {
     color: #17a2b8;
     border-bottom-color: #17a2b8;
@@ -177,6 +207,8 @@ element.style {
     display: inline-block;
     font-weight: 700;
     color: #FFF;
+    font-size: 15px;
+    font-family: 'Montserrat';
     text-transform: uppercase;
     line-height: 1;
     padding-bottom: 4px;

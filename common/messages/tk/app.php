@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'site_name' => '"Daşoguzawtoulag"',
+    'site_name' => 'Daşoguzawtoulag',
     'site_name2' => 'Önümçilik birleşigi',
     'Site description' => 'DaşoguzAwtoulag',
     'Home' => 'Baş sahypa',

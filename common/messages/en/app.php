@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'site_name' => '"Dashoguzawtoulag"',
+    'site_name' => 'Dashoguzawtoulag',
     'site_name2' => 'Production association',
     //header
     'select_language' => 'Select language',

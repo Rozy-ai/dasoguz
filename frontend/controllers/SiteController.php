@@ -261,49 +261,22 @@ class SiteController extends CommonController
 
     public function actionSearch()
     {
+        if (isset($_GET['query']) && isset($_GET['category'])) {
+            $searchModel = new ItemLangSearch();
+            $searchModel->status = 1;
+            $searchModel->query = $_GET['query'];
+            $searchModel->category = $_GET['category'];
+
+            return $this->render('search_by_blog', ['items' => $searchModel->searchByCategory([]), 'pages' => $searchModel->pages, 'query' => $_GET['query']]);
+        }
         if (isset($_GET['query'])) {
-            $searchWord = $_GET['query'];
-            $query = ItemLang::find();
-            // add conditions that should always apply here
-
-            $query = $query
-                ->andWhere(['language' => Yii::$app->language]);
-            if (isset($searchWord) && strlen(trim($searchWord))) {
-                $query = $query->andWhere(['or',
-                    ['like', 'title', $searchWord],
-                    ['like', 'description', $searchWord],
-                    ['like', 'content', $searchWord]
-                ])->asArray()->all();
+            if (empty($_GET['query'])) {
+               return $this->redirect(Yii::$app->request->referrer ?: Yii::$app->homeUrl);
             }
-
-
-            $model = new TmWord();
-
-            $model = $model->find()
-                ->orwhere("`word` LIKE '%".$searchWord."%'")
-//                ->orwhere("`description` LIKE '%".$searchWord."%'")
-//                ->orwhere("`example` LIKE '%".$searchWord."%'")
-                ->andWhere('status = 1')
-                ->orderBy('word', ASC)
-                ->asArray()
-                ->all();
-            $model = $query + $model;
-
-            $i = 0;
-
-            foreach ( $query as $key => $value){
-                $i++;
-                $arr[$i] =['id' => $value['item_id'], 'title' => $value['title'], 'description' => $value['description']];
-            }
-            foreach ( $model as $key => $value){
-                $i++;
-                $arr[$i] =['id' => $value['id'], 'word' => $value['word'], 'description' => $value['description']];
-            }
-
-            return $this->render('search', [
-                'model' => $model,
-                'query' => $_GET['query']
-            ]);
+            $searchModel = new ItemLangSearch();
+            $searchModel->status = 1;
+            $searchModel->query = $_GET['query'];
+            return $this->render('search', ['searchModel' => $searchModel->search([]), 'query' => $_GET['query']]);
         }
     }
 

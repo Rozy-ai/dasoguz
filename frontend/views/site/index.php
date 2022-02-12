@@ -13,7 +13,7 @@ use yii\helpers\Html;
                         <div class="splide">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                        <?php foreach ($sliders as $key => $slider): ?>
+<?php foreach ($sliders as $key => $slider): ?>
 <?php $documents = $slider->documents; 
 foreach($documents as $document): ?>
 <?php $slds[] = $document->getThumb() ?>
@@ -265,5 +265,3 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             }).mount();
         });
     </script>
-
-    

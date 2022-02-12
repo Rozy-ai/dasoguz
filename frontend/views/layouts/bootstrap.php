@@ -34,7 +34,7 @@ MainAsset::register($this);
     </head>
 
 
-    <body onscroll="scroll()">
+    <body onscroll="scroll()" style="font-family: Montserrat">
     <?php
 
     $catNavItems = [];
