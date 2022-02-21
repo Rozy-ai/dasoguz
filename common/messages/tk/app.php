@@ -34,7 +34,7 @@ return array(
     'Calculation' => 'Hasaplama',
     'Send us your advices' => 'Bize teklibiňizi ýollaň',
     'Email address' => 'Email adresiňiz',
-    'Our address' => 'Biziň salgymyz',
+    'Our address' => 'Salgymyz',
     'Address' => 'Salgy',
     'Phone' => 'Telefon',
 
@@ -63,8 +63,8 @@ return array(
     'Event not found' => 'Saýlan günüňizde sahna ýok',
     'Event waiting...' => 'Magluamt yüklenilýär...',
 
-    'News' => 'Täzelikler',
-    'Show all news >' => 'Ählisini görkez >',
+    'News' => 'Soňky habarlar',
+    'Show all news' => 'Hemmesi',
     'Publications' => 'Makalalar',
     'Show all publications' => 'Ählisini görkez',
 
@@ -345,12 +345,21 @@ return array(
     'Shipping' => 'Dürli ýükleri daşamak',
     'Passenger Transportation' => 'Ýolagçy gatnatmak',
     'Vehicle ordering' => 'Ulag sargyt etmek',
-    'address' => 'Türkmenistan, Daşoguz welaýaty,<br> Daşoguz şäheri, Şagadam köçesi 41.<br> <br>
-Tel: +993 322 6-07-04 <br>
+    'address' => 'Türkmenistan, Daşoguz welaýaty,<br> Daşoguz şäheri, Şagadam köçesi 41.',
+    'phone_footer' => 'Tel: +993 322 6-07-04 <br>
 Faks: +993 322 6-07-04 <br>
 Poçta kody: 746300<br>',
-'Pages' => 'Sahypalar',
+'Pages' => 'Ähli sahypalar',
 'Date' => 'Wagty',
+'Intercity routes' => 'Şäherara ugurlar',
+'Transportation of passengers by intercity routes.' => 'Ýolagçylary şäherara ugurlar boýunça gatnatmak.',
+'Trucks' => 'Ýük awtoulaglary',
+'Intercity transportation of various cargoes in trucks.' => 'Ýük awtoulaglarynda dürli ýükleri şäherara daşamak.',
+'Taxi cars' => 'Taksi awtoulaglary',
+'Transportation of passengers in taxis.' => 'Taksi awtoulaglarynda ýolagçylary gatnatmak.',
+'Car Repair' => 'Awtoulaglary abatlamak',
+'Car repairs and maintenance.' => 'Awtoulaglary abatlamak we olara tehniki taýdan hyzmat etmek.',
+'Services of our company' => 'Biziň kärhanamyzyň hyzmatlary',
 
 
 );

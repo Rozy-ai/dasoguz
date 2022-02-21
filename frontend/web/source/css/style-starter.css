@@ -9621,7 +9621,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   color: var(--heading-color);
   letter-spacing: 0px;
-  font-family: 'Merriweather', serif; }
+  /*font-family: 'Merriweather', serif;*/ 
+}
 
 p {
   margin: 0;
@@ -10400,8 +10401,8 @@ p.counter {
 .w3l-footer-29-main #movetop {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 15px;
+  bottom: 40px;
+  right: 5%;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -10410,11 +10411,11 @@ p.counter {
   color: #fff;
   width: 50px;
   height: 50px;
-  background: var(--primary-color);
+  background: #f9f9fb;
   padding: 0;
   line-height: 36px;
-  border-radius: 35px;
   transition: 0.3s ease-out; }
+
 
 .w3l-footer-29-main a.navbar-brand {
   color: #0099e5;
@@ -10455,7 +10456,7 @@ p.counter {
   color: var(--para-color); }
 
 .w3l-footer-29-main .footer-list-29 ul li a:hover {
-  color: #333; }
+  color: #fff; }
 
 .w3l-footer-29-main .main-social-footer-29 a {
   margin-left: 10px;
@@ -11967,15 +11968,15 @@ section.news .institution-link{
     text-decoration: none !important;
     color: #000;
     display: block;
-    -webkit-border-radius: 10px !important;
+/*    -webkit-border-radius: 10px !important;
     border-radius: 10px !important;
     -webkit-box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 35%);
-    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 35%);
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 35%);*/
     overflow: hidden;
 }
 .grid-blog-post {
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 2px 3px 0 #f0f0f0;
+/*    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 3px 0 #f0f0f0;*/
     transition: all 0.3s ease 0s;
     background: #FFF;
 }
@@ -11999,17 +12000,17 @@ section.news .institution-link{
 .post-thumbnail {
     position: relative;
     overflow: hidden;
-    -webkit-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
 }
 .post-content {
     /*padding: 20px 35px 15px 10px;
     position: relative;*/
     height: 116px;
-    display: -webkit-box;
+/*    display: -webkit-box;
     display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-flexbox;*/
+/*    display: flex;*/
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -12026,7 +12027,7 @@ section.news .institution-link{
     color: #0099e5;
 }
 
-.post-content h2 {color: #303030;font-size: 16px;font-weight: 700;line-height: 22px;margin: 0;word-break: break-all;-webkit-transition: .2s color;transition: .2s color;word-break: normal;margin-top: 30px}
+.post-content h2 {color: #000;font-size: 23px;font-weight: 600;line-height: 40px;margin: 0;word-break: break-all;-webkit-transition: .2s color;transition: .2s color;word-break: normal}
 .post-content-inner p {
     letter-spacing: 0.3px;
     margin-bottom: 20px;

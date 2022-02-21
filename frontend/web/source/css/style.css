@@ -1,5 +1,7 @@
 /*News*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 .pl-3, .px-3 {
     padding-left: 1rem!important;
 }
@@ -281,3 +283,4 @@ ul.pagination li.disabled span {
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
+

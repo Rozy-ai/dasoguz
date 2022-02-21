@@ -4,7 +4,7 @@ use yii\widgets\LinkPager;
 
 $this->registerMetaTag(['name' => 'description', 'content' => yii::t('app', 'Site description')]);
 
-$this->title = yii::t('app', 'All Events');
+$this->title = yii::t('app', 'All news');
 if (isset($categoryModel)) {
     $this->params['breadcrumbs'] = $categoryModel->getBreadcrumbs();
 }

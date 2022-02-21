@@ -179,13 +179,13 @@ ul.lang_ul li {
 .top-menu > nav > ul > li {
     display: inline-block;
     margin-right: 40px;
+    margin-left: 40px;
     position: relative;
 }
 .top-menu > nav > ul > li.active > a, .top-menu > nav > ul > li:hover > a, a.uMenuItemA {
    /* color: #17a2b8;*/
    background: #EFEA03;
     color: #116B30;
-    padding: 8px 15px;
     border-radius: 5px;
 }
 .top-menu > nav > ul > li > a.active {
@@ -196,6 +196,7 @@ ul.lang_ul li {
 }
 
 .top-menu > nav > ul > li.active > a {
+	padding: 8px 15px;
     color: #17a2b8;
     border-bottom-color: #17a2b8;
 }
@@ -204,6 +205,7 @@ ul.lang_ul li {
 }*/
 .top-menu > nav > ul > li > a {
     text-decoration: none;
+    padding: 8px 15px;
     display: inline-block;
     font-weight: 700;
     color: #FFF;
@@ -211,7 +213,6 @@ ul.lang_ul li {
     font-family: 'Montserrat';
     text-transform: uppercase;
     line-height: 1;
-    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     transition: all 200ms ease-out;
 }
@@ -222,7 +223,7 @@ ul.lang_ul li {
     width: 1px;
     height: 20px;
     top: 0;
-    right: -22px;
+    right: -45px;
     background: rgba(255,255,255,0.1);
 }
     </style>

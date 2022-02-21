@@ -64,7 +64,7 @@ return array(
 
     'All news' => 'Все новости',
     'News' => 'Новости',
-    'Show all news >' => 'Ählisini görkez >',
+    'Show all news' => 'Показать все новости',
     'Publications' => 'Makalalar',
     'Show all publications' => 'Ählisini görkez',
 
@@ -312,14 +312,25 @@ return array(
     'Shipping' => 'Перевозка груза',
     'Passenger Transportation' => 'Пассажирские перевозки',
     'Vehicle ordering' => 'Заказ автомобиля',
-        'address' => 'Туркменистан, Дашогузский велаят, <br>г. Дашогуз, ул. Шагадам 41. <br><br>
-Телефон: +993 322 6-07-04 <br>
+        'address' => 'Туркменистан, Дашогузский велаят, <br>г. Дашогуз, ул. Шагадам 41.
+
+',
+        'phone_footer' => 'Телефон: +993 322 6-07-04 <br>
 Факс: +993 322 6-07-04 <br>
 Почтовый индекс: 746300 <br>
 
 ',
 'Pages' => 'Страницы',
 'Date' => 'Время',
+'Intercity routes' => 'Междугородние маршруты',
+'Transportation of passengers by intercity routes.' => 'Перевозка пассажиров по междугородним маршрутам',
+'Trucks' => 'Грузовые автомобили',
+'Intercity transportation of various cargoes in trucks.' => 'Междугородние перевозки различных грузов грузовыми автомобилями.',
+'Taxi cars' => 'Автомобили такси',
+'Transportation of passengers in taxis.' => 'Перевозка пассажиров в такси.',
+'Car Repair' => 'Ремонт машин',
+'Car repairs and maintenance.' => 'Ремонт и техническое обслуживание автомобилей.',
+'Services of our company' => 'Услуги нашей компании',
 
 );
 ?>

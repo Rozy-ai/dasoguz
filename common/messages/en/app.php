@@ -46,8 +46,9 @@ return array(
     'On map' => 'Show map',
     'Home' => 'Home',
     'route_no' => 'Number',
-        'address' => '41 Shagadam, Dashoguz city,<br> Dashoguz velayat, Turkmenistan<br><br>
-Phone: +993 322 6-07-04 <br>
+        'address' => '41 Shagadam, Dashoguz city,<br> Dashoguz velayat, Turkmenistan
+',
+        'phone_footer' => 'Phone: +993 322 6-07-04 <br>
 Fax: +993 322 6-07-04 <br>
 Index: 746300<br>
 ',
