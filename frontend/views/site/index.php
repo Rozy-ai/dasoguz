@@ -98,7 +98,7 @@ $path = $about_desc->getThumbPath();
                             </div>
                     </div>
                     <div class="col-lg-5 about-right-faq align-self" style="margin-left: 20px;">
-<!--                         <span class="text mb-2">Amatly we ýokary hilli awtobus hyzmatlary.</span> -->
+
                         <h4 style="font-weight: normal;color: #1090CB;"><?= $about_desc->title ?></h4>
                         <p class="mt-4 mb-4" style="color: #868686;font-size: 18px"><?= $about_desc->description ?></p>
                         <a href="<?= $href ?>" class="btn btn-style btn-effect mt-lg-0 mt-4"><?= yii::t('app', 'Read more') ?></a>
@@ -250,7 +250,7 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             </div>
             <div class="row">
             <?php foreach ($news as $single): ?>
-                <?php// $date = Yii::$app->controller->renderDateToWord($single->date_created); ?>
+               
 
             <div class="col-lg-4 col-xs-12 mb-50">
                 <a class="institution-link" href="<?= '/item/'.$single->id ?>">

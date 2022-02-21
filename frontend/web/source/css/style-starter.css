@@ -12006,7 +12006,7 @@ section.news .institution-link{
 .post-content {
     /*padding: 20px 35px 15px 10px;
     position: relative;*/
-    height: 116px;
+/*    height: 116px;*/
 /*    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;*/
@@ -12027,7 +12027,7 @@ section.news .institution-link{
     color: #0099e5;
 }
 
-.post-content h2 {color: #000;font-size: 23px;font-weight: 600;line-height: 40px;margin: 0;word-break: break-all;-webkit-transition: .2s color;transition: .2s color;word-break: normal}
+.post-content h2 {color: #000;font-size: 23px;font-weight: 600;margin: 0;word-break: break-all;-webkit-transition: .2s color;transition: .2s color;word-break: normal}
 .post-content-inner p {
     letter-spacing: 0.3px;
     margin-bottom: 20px;
