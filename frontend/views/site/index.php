@@ -80,8 +80,14 @@ $category = \common\models\wrappers\CategoryWrapper::find()->where(['code' => 'a
 $catId = $category->id;
 $about_desc = \common\models\wrappers\ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1','is_main'=>'0','is_menu'=>'1'])->one(); 
 $href = $about_desc->url;
-$path = $about_desc->getThumbPath();
-?>
+// $path = $about_desc->getThumbPath();
+
+ $documents = $about_desc->documents; 
+foreach($documents as $document): ?>
+<?php $path[] = $document->getThumb() ?>
+<?php endforeach ?>
+
+
 
     <section class="w3l-index3" id="about">
         <div class="midd-w3 py-5">
@@ -108,12 +114,12 @@ $path = $about_desc->getThumbPath();
                 <div class="row" style="margin-top: 50px">
                    <div class="col-lg-5 offset-lg-1 text-lg-right">
                         <div class="position-relative">
-                            <img src="<?=$path?>" alt="" class="radius-image img-fluid">
+                            <img style="height: 300px" src="<?=$path[0]?>" alt="" class="radius-image img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-5 text-lg-left" style="margin-left: 20px;">
                         <div class="position-relative">
-                            <img src="<?=$path?>" alt="" class="radius-image img-fluid">
+                            <img style="height: 300px" src="<?=$path[1]?>" alt="" class="radius-image img-fluid">
                         </div>
                     </div>
                 </div>
