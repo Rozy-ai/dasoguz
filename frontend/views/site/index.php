@@ -142,7 +142,7 @@ $href = $services->url;
      <div class="container">
          <div class="row">
              <div class="col-md-5">
-                  <h2 style="font-size: 30px;line-height: 48px;color: #000;font-weight: 600" class="move zoomIn"><?= yii::t('app', 'Services of our company') ?></h2>
+                  <a href="<?= '/item/'.$services->id ?>"><h2 style="font-size: 30px;line-height: 48px;color: #1090CB;font-weight: 600" class="move zoomIn"><?= yii::t('app', 'Services of our company') ?></h2></a>
                   <br>
                   <p style="color: #585858;font-size: 20px;line-height: 200%"><?= $services->description ?></p>
              </div>
@@ -290,7 +290,7 @@ $news = \common\models\wrappers\ItemWrapper::find()->with(['translations','docum
             new Splide('.splide', {
                 type: 'loop',
                 width: '100%',
-                autoplay: false,
+                autoplay: true,
                 interval: 4000,
             }).mount();
         });
