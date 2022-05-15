@@ -3,8 +3,11 @@ use yii\helpers\Html;
 use yii\widgets\LinkPager;
 
 $this->registerMetaTag(['name' => 'description', 'content' => yii::t('app', 'Site description')]);
-
+if ($categoryModel->code == 'regulatory_documents') {
+$this->title = yii::t('app', 'NORMATIVE LEGAL ACTS');
+} else {
 $this->title = yii::t('app', 'All news');
+}
 if (isset($categoryModel)) {
     $this->params['breadcrumbs'] = $categoryModel->getBreadcrumbs();
 }
@@ -21,9 +24,31 @@ $this->params['breadcrumbs'][] = Yii::$app->controller->truncate('', 8, 65);
             <div class="col-lg-9 col-md-9 col-sm-12 pl-3">
                                     <?php
                     foreach ($events as $event):
+
                         $href = $event->url;
-                        $path = $event->getThumbPath();
-                        ?>
+                        $path = $event->getThumbPath();                        ?>
+            <?php if ($categoryModel->code == 'regulatory_documents'): ?>
+                    <?php if ($event->title != null): ?>
+                <div class="row pb-4 my-4 pr-4">
+                    <div class="col-sm-12"> 
+                        
+                        <div class="pb-1 pl-0" style="color: #000">
+                                     <?php
+                                         $date = New DateTime($event->date_created);
+                                         echo $date->format('d-m-Y');
+                               ?>
+                        </div>
+                        <div class="news-list-title" style="color: #000"><?=$event->title ?></div>
+                        <div class="news-list-description"><p style="color: #000">
+                            <?php 
+                            $desc = Yii::$app->controller->truncate($event->description, 26, 280);
+                              echo $desc;
+                            ?></p></div>
+                            <p><a href="<?= $path ?>"><?= yii::t('app','Download') ?></a></p>
+                    </div>
+                </div>
+                <?php endif ?>
+                        <?php else: ?>
                 <a href="<?= $href ?>" class="row pb-4 my-4 pr-4">
                     <div class="col-lg-4 col-md-4 col-sm-12">
                         <?=\yii\helpers\Html::img($path, ['alt' => "$event->title", 'class' => 'singleNews-img'])?>
@@ -43,6 +68,7 @@ $this->params['breadcrumbs'][] = Yii::$app->controller->truncate('', 8, 65);
                             ?></p></div>
                     </div>
                 </a>
+                  <?php endif ?>
                 <?php endforeach;?>
                     <?php
                     echo 

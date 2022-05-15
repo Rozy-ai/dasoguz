@@ -18,7 +18,7 @@ echo \common\widgets\dropzone\DropZoneYii2::widget([
     'deleteUrl' => '/document/deleteupload',
     'options' => [
         'maxFilesize' => 100,
-        'acceptedFiles' => 'image/*'
+        'acceptedFiles' => 'image/*,application/pdf,.doc,.docx,.xls,.xlsx,.csv,.tsv,.ppt,.pptx,.pages,.odt,.rtf'
     ]
 ]);
 ?>

@@ -73,9 +73,13 @@ class ItemController extends CommonController {
             }
         }
         $viewpath = 'index';
-        if ( $modelCategory->code = 'news'){
+        if ( $modelCategory->code == 'news' || $modelCategory->code == 'regulatory_documents'){
 
-                 $category = CategoryWrapper::find()->where(['code' => 'news'])->one();
+            if ($modelCategory->code == 'regulatory_documents') {
+    $category = CategoryWrapper::find()->where(['code' => 'regulatory_documents'])->one();
+} else {
+$category = CategoryWrapper::find()->where(['code' => 'news'])->one();
+}
 $catId = $category->id;
 
 $events = ItemWrapper::find()->with(['translations','documents'])->where(['category_id' => $catId, 'status' => '1'])->orderBy('date_created DESC')->all();

@@ -21,7 +21,7 @@ MainAsset::register($this);
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php
         if (isset($this->title) && strlen(trim($this->title)) < 25) {
-            $this->title = $this->title . ' | ' . Yii::t('app', '');
+            $this->title = $this->title;
         }
         ?>
         <title><?= Html::encode($this->title) ?></title>

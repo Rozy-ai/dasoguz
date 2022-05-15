@@ -178,8 +178,6 @@ ul.lang_ul li {
 }
 .top-menu > nav > ul > li {
     display: inline-block;
-    margin-right: 40px;
-    margin-left: 40px;
     position: relative;
 }
 .top-menu > nav > ul > li.active > a, .top-menu > nav > ul > li:hover > a, a.uMenuItemA {
@@ -222,8 +220,8 @@ ul.lang_ul li {
     position: absolute;
     width: 1px;
     height: 20px;
-    top: 0;
-    right: -45px;
+    top: 6px;
+    right: -5px;
     background: rgba(255,255,255,0.1);
 }
     </style>

@@ -360,6 +360,8 @@ Poçta kody: 746300<br>',
 'Car Repair' => 'Awtoulaglary abatlamak',
 'Car repairs and maintenance.' => 'Awtoulaglary abatlamak we olara tehniki taýdan hyzmat etmek.',
 'Services of our company' => 'Biziň kärhanamyzyň hyzmatlary',
+'Download' => 'Ýüklap al',
+'NORMATIVE LEGAL ACTS' => 'KADALAŞDYRYJY HUKUK NAMALAR ',
 
 
 );

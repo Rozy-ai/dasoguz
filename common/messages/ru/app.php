@@ -331,6 +331,8 @@ return array(
 'Car Repair' => 'Ремонт машин',
 'Car repairs and maintenance.' => 'Ремонт и техническое обслуживание автомобилей.',
 'Services of our company' => 'Услуги нашей компании',
+'Download' => 'Скачать',
+'NORMATIVE LEGAL ACTS' => 'НОРМАТИВНО-ПРАВОВЫЕ АКТЫ  ',
 
 );
 ?>
